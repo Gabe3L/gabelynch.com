@@ -1,0 +1,43 @@
+@import url('../constants.css');
+
+.tech-card {
+  margin: 20px;
+  background: var(--dark);
+  border-radius: 16px;
+  padding: 25px 15px;
+  box-shadow: 0 0 10px var(--dark);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--primary);
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.tech-card:hover {
+  box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
+  transform: translateY(-8px);
+}
+
+.tech-logo {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.tab-button {
+  width: 100%;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid var(--light);
+  color: var(--white);
+  transition: background 0.3s;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: var(--light);
+  color: var(--white);
+}

@@ -1,0 +1,21 @@
+@import url('../constants.css');
+
+.ftco-about .img-about {
+    width: 90%;
+    height: 85%;
+    z-index: 0;
+    position: relative;
+}
+
+.ftco-about .img-about .img {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.about-me-box {
+    background-color: var(--transparent-grey);
+    border-radius: 10px;
+    padding: 20px;
+  }

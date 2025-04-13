@@ -1,0 +1,55 @@
+@import url('../constants.css');
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-box {
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact-logo {
+  width: 70px;
+  height: 70px;
+  fill: var(--primary);
+}
+
+.icon-box .icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2em;
+    background: var(--transparent-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background 0.1s ease-out;
+}
+
+.icon-box .icon span {
+    font-size: 50px;
+    color: var(--primary);
+}
+
+.icon-box .icon:hover {
+    background: var(--light);
+    transform: scale(1.1);
+}
+
+@media (max-width: 991.98px) {
+    .icon-box .icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .icon-box .icon {
+        width: 80px;
+        height: 80px;
+    }
+}

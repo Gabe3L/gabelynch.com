@@ -1,0 +1,10 @@
+@import url('../constants.css');
+
+.profile-img {
+    background-image: url('../../assets/images/profile/headshot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-left: 540px;
+}
