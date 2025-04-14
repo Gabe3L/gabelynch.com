@@ -9,7 +9,8 @@ This site showcases my work, skills, and projects across web design, machine lea
 - Clean, responsive design
 - Built with HTML, CSS, and JavaScript
 - Hosted using **Cloudflare Pages**
-- Sections for:
+
+### Site Sections
   - About Me
   - Resume
   - Tech Stack
@@ -21,3 +22,13 @@ This site showcases my work, skills, and projects across web design, machine lea
 - **Frontend:** HTML5, CSS3, JavaScript (vanilla)
 - **Hosting:** [Cloudflare Pages](https://pages.cloudflare.com/)
 - **Domain:** [www.gabelynch.com](https://www.gabelynch.com)
+
+## License
+
+This is an open source project available under the [License](LICENSE) found in the root directory of this project.
+
+## Credits
+
+- Inspired by minimal portfolio themes from [Colorlib](https://colorlib.com/)
+- Logos and favicon made with [Canva](https://www.canva.com/)
+- Fonts provided via [Google Fonts](https://fonts.google.com)
