@@ -41,3 +41,18 @@
   background-color: var(--light);
   color: var(--white);
 }
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
+  .project {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
+}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}

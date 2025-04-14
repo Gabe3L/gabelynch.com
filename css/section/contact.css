@@ -13,9 +13,9 @@
 }
 
 .contact-logo {
-  width: 70px;
-  height: 70px;
-  fill: var(--primary);
+    width: 70px;
+    height: 70px;
+    fill: var(--primary);
 }
 
 .icon-box .icon {
@@ -40,16 +40,22 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 991.98px) {
-    .icon-box .icon {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 767.98px) {
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
     .icon-box .icon {
         width: 80px;
         height: 80px;
     }
 }
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .icon-box .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}

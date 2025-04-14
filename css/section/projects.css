@@ -33,6 +33,7 @@
     border-radius: 15px;
     position: relative;
 }
+
 .project .text h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -60,10 +61,23 @@
     opacity: 1;
 }
 
-@media (max-width: 767.98px) {
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
     .project {
         width: 90%;
         max-width: 300px;
         margin: 0 auto 30px;
     }
 }
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .project {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
