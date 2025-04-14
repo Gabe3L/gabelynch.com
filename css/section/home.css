@@ -1,7 +1,7 @@
 @import url('../constants.css');
 
 .profile-img {
-    background-image: url('../../assets/images/profile/headshot.png');
+    background-image: url('../../assets/images/profile/headshot.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
