@@ -1,13 +1,124 @@
 @import url('constants.css');
 
 /* Home Section */
-.profile-img {
+#home-section.hero {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    background: var(--black);
+}
+
+/* #home-section .profile */
+
+#home-section .profile-img {
     background-image: url('../assets/images/profile/headshot.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    height: 767px;
-    margin-left: 540px;
+    height: 100%;
+}
+
+#home-section text {
+    padding: 20px;
+}
+
+#home-section h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+}
+
+#home-section h1 span {
+    color: var(--light);
+    text-align: left;
+}
+
+#home-section h3 {
+    font-size: 1.8rem;
+    color: var(--light);
+    font-weight: 600;
+    text-align: left;    
+}
+
+#home-section h4 {
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 400;
+    text-align: left;
+}
+
+#home-section .btn {
+    margin-right: 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#home-section .btn-primary {
+    background-color: var(--light);
+    border-color: var(--light);
+}
+
+#home-section .btn-primary:hover {
+    background-color: var(--light);
+    border-color: var(--light);
+}
+
+#home-section .btn-outline-white {
+    color: var(--light);
+    border: 2px solid var(--light);
+    background-color: transparent;
+}
+
+#home-section .btn-outline-white:hover {
+    background-color: var(--light);
+    color: var(--light);
+}
+
+/* Device Specific Styles */
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
+    #home-section .profile-img {
+        min-height: 300px;
+    }
+
+    #home-section .text {
+        margin-top: 30px;
+    }
+
+    #home-section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #home-section h1 span {
+        text-align: center;
+    }
+    
+    #home-section h3 {
+        text-align: center;    
+    }
+
+    #home-section h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #home-section .profile-img {
+        display: none;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    #home-section .text {
+        margin-top: 100px;
+    }
 }
 
 /* About Me Section */
@@ -31,8 +142,79 @@
     padding: 20px;
 }
 
+/* Device Specific Styles */
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
+    .about-me-box {
+        height: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .about-me-box h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-me-box {
+        height: 400px;
+        padding: 15px;
+        font-size: 0.84rem;
+    }
+
+    .about-me-box h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
+
+/* Resume Section */
+#resume-section .resume-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+    background: var(--transparent-grey);
+    padding: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#resume-section .resume-wrap .date {
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--primary);
+}
+
+#resume-section .resume-wrap h2 {
+    font-size: 26px;
+}
+
+#resume-section .resume-wrap .position {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Device Specific Styles */
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
+
 /* Technologies Section */
-.tech-card {
+#technologies-section .tech-card {
     margin: 20px;
     background: var(--dark);
     border-radius: 16px;
@@ -45,20 +227,20 @@
     border: 1px solid var(--primary);
     animation: fadeInUp 0.5s ease forwards;
     opacity: 0;
-  }
-  
-  .tech-card:hover {
+}
+
+#technologies-section .tech-card:hover {
     box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
     transform: translateY(-8px);
-  }
-  
-  .tech-logo {
+}
+
+#technologies-section .tech-logo {
     width: 70px;
     height: 70px;
     margin-bottom: 15px;
-  }
-  
-  .tab-button {
+}
+
+#technologies-section .tab-button {
     width: 100%;
     font-weight: 600;
     border-radius: 25px;
@@ -66,13 +248,23 @@
     border: 2px solid var(--light);
     color: var(--white);
     transition: background 0.3s;
-  }
-  
-  .tab-button:hover,
-  .tab-button.active {
+}
+
+#technologies-section .tab-button:hover, .tab-button.active {
     background-color: var(--light);
     color: var(--white);
-  }
+}
+
+/* Device Specific Styles */
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
 
 /* Projects Section */
 .project {
@@ -136,27 +328,49 @@
     opacity: 1;
 }
 
-/* Contact Section */
+/* Device Specific Styles */
 
-.contact-icons {
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
+    .project {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .project {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
+
+/* Contact Section */
+#contact-section .contact-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.icon-box {
+#contact-section .contact-icon-box {
     text-align: center;
     padding: 1rem;
 }
 
-.contact-logo {
+#contact-section .contact-logo {
     width: 70px;
     height: 70px;
     fill: var(--primary);
 }
 
-.icon-box .icon {
+#contact-section .contact-icon-box .icon {
     width: 120px;
     height: 120px;
     margin: 0 auto 2em;
@@ -168,39 +382,21 @@
     transition: transform 0.3s ease-in-out, background 0.1s ease-out;
 }
 
-.icon-box .icon span {
+#contact-section .contact-icon-box .icon span {
     font-size: 50px;
     color: var(--primary);
 }
 
-.icon-box .icon:hover {
+#contact-section .contact-icon-box .icon:hover {
     background: var(--light);
     transform: scale(1.1);
 }
-
-/* Footer Section */
 
 /* Device Specific Styles */
 
 /* Phone (max-width: 767px) */
 @media (max-width: 767px) {
-    .project {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto 30px;
-    }
-
-    .about-me-box {
-        height: 100%;
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    .about-me-box h2 {
-        font-size: 3rem;
-    }
-
-    .icon-box .icon {
+    #contact-section .contact-icon-box .icon {
         width: 80px;
         height: 80px;
     }
@@ -208,27 +404,24 @@
 
 /* Tablet (min-width: 768px and max-width: 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-    .project {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto 30px;
-    }
-    
-    .about-me-box {
-        height: 400px;
-        padding: 15px;
-        font-size: 0.84rem;
-    }
-
-    .about-me-box h2 {
-        font-size: 2rem;
-    }
-    
-    .icon-box .icon {
+    #contact-section .contact-icon-box .icon {
         width: 100px;
         height: 100px;
     }
 }
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {}
+
+/* Footer Section */
+
+/* Device Specific Styles */
+
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {}
+
+/* Tablet (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
 
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {}
