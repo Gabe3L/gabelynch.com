@@ -103,10 +103,6 @@ AOS.init({
 		$this.find('.dropdown-menu').removeClass('show');
 	});
 
-	$('#dropdown04').on('show.bs.dropdown', function () {
-		console.log('show');
-	});
-
 	var scrollWindow = function () {
 		$(window).scroll(function () {
 			var $w = $(this),
@@ -154,7 +150,6 @@ AOS.init({
 				$('.number').each(function () {
 					var $this = $(this),
 						num = $this.data('number');
-					console.log(num);
 					$this.animateNumber(
 						{
 							number: num,

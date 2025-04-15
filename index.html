@@ -344,10 +344,14 @@
 
 	<div class="row">
 		<div class="col-md-12 text-center mt-4">
-			<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Gabe Lynch
-			</p>
+			Copyright &copy; <span id="year"></span> Gabe Lynch
+		</p>
 		</div>
 	</div>
+	
+	<script>
+	  document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
