@@ -116,21 +116,20 @@
 }
 
 /* About Me Section */
-.ftco-about .img-about {
+#about-section .img-about {
     width: 90%;
     height: 85%;
     z-index: 0;
     position: relative;
 }
 
-.ftco-about .img-about .img {
+#about-section .img-about .img {
     display: block;
     width: 100%;
     position: relative;
-    z-index: 1;
 }
 
-.about-me-box {
+#about-section .about-me-box {
     background-color: var(--transparent-grey);
     border-radius: 10px;
     padding: 20px;
@@ -261,7 +260,7 @@
 @media (min-width: 992px) {}
 
 /* Projects Section */
-.project {
+#projects-section .project {
     width: 100%;
     height: 285px;
     max-width: 300px;
@@ -272,7 +271,7 @@
     overflow: hidden;
 }
 
-.project .overlay {
+#projects-section .project .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -286,7 +285,7 @@
     border-radius: 15px;
 }
 
-.project .text {
+#projects-section .project .text {
     max-width: 80%;
     z-index: 1;
     opacity: 0;
@@ -295,16 +294,16 @@
     position: relative;
 }
 
-.project .text h3 {
+#projects-section .project .text h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.project .text h3 a {
+#projects-section .project .text h3 a {
     color: var(--white);
 }
 
-.project .text span {
+#projects-section .project .text span {
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -312,13 +311,13 @@
     font-weight: 600;
 }
 
-.project:hover .overlay,
-.project:focus .overlay {
-    opacity: .9;
+#projects-section .project:hover .overlay,
+#projects-section .project:focus .overlay {
+    opacity: .75;
 }
 
-.project:hover .text,
-.project:focus .text {
+#projects-section .project:hover .text,
+#projects-section .project:focus .text {
     opacity: 1;
 }
 
@@ -326,7 +325,7 @@
 
 /* Phone (max-width: 767px) */
 @media (max-width: 767px) {
-    .project {
+    #projects-section .project {
         width: 90%;
         max-width: 300px;
         margin: 0 auto 30px;
@@ -335,7 +334,7 @@
 
 /* Tablet (min-width: 768px and max-width: 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-    .project {
+    #projects-section .project {
         width: 90%;
         max-width: 300px;
         margin: 0 auto 30px;
@@ -350,7 +349,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 #contact-section .contact-icon-box {
@@ -391,14 +390,22 @@
 /* Phone (max-width: 767px) */
 @media (max-width: 767px) {
     #contact-section .contact-icon-box .icon {
-        width: 110px;
-        height: 110px;
+        width: 90px;
+        height: 90px;
+    }
+
+    #contact-section .contact-icons {
+        gap: 0rem;
+    }
+
+    #contact-section .contact-logo {
+        width: 55px;
+        height: 55px;
     }
 }
 
 /* Tablet (min-width: 768px and max-width: 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-}
+@media (min-width: 768px) and (max-width: 991px) {}
 
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {}
