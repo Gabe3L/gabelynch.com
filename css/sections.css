@@ -1,5 +1,7 @@
 @import url('constants.css');
 
+/* Navbar Section */
+
 /* Home Section */
 #home-section.hero {
     position: relative;
@@ -381,7 +383,7 @@
     width: 100%;
     height: 285px;
     max-width: 300px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     position: relative;
     z-index: 0;
     border-radius: 15px;
@@ -394,7 +396,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    content: '';
     opacity: 0;
     background: var(--primary);
     z-index: -1;
