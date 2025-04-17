@@ -16,7 +16,7 @@
 
 #home-section h1 {
     color: var(--light);
-    font-size: 3.3rem;
+    font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.2;
     text-align: left;
@@ -142,7 +142,7 @@
         height: 100%;
         z-index: 0;
         overflow: hidden;
-    } */
+    }
     
     #home-section .image-wrapper img {
         width: 100%;
