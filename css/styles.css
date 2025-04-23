@@ -12,12 +12,43 @@ section {
   display: block;
 }
 
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  background-color: var(--white);
+}
+
+.ftco-animated {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
 .section-header {
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
   text-align: center;
-  animation: fadeInUp 1s ease;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -31,26 +62,9 @@ section {
   margin: 0.5rem 0;
 }
 
-.section-header h2 {
-  margin-bottom: 1rem;
-}
-
-
-.section-header .subheading {
-  font-size: 13px;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: 3px;
-}
-
 .section-header h1 {
   position: absolute;
   top: 0px;
-  left: 0;
-  right: 0;
   color: var(--transparent-grey);
   z-index: -1;
   font-weight: 900;
@@ -58,24 +72,10 @@ section {
 }
 
 .section-header h2 {
+  color: var(--white);
   font-size: 3rem;
   font-weight: 700;
-}
-
-.section-header h2 span {
-  font-weight: 400;
-}
-
-.section-header.section-header-white .subheading {
-  color: var(--transparent-grey);
-}
-
-.section-header.section-header-white h2 {
-  color: var(--white);
-}
-
-.section-header.section-header-white p {
-  color: var(--transparent-grey);
+  margin-bottom: 1rem;
 }
 
 /* Device Specific Styles */
@@ -96,16 +96,6 @@ section {
 
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  background-color: var(--white);
-}
 
 #home-section.hero {
   position: relative;
@@ -138,6 +128,8 @@ body {
   color: var(--light);
   font-size: 3.6rem;
   font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem
 }
 
 #home-section h3,
@@ -145,6 +137,8 @@ body {
   font-size: 1.5em;
   color: var(--white);
   font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem
 }
 
 #home-section .btn {
@@ -3362,15 +3356,6 @@ button.bg:focus {
 .ml-2,
 .mx-2 {
   margin-left: 0.5rem !important;
-}
-
-.m-3 {
-  margin: 1rem !important;
-}
-
-.mt-3,
-.my-3 {
-  margin-top: 1rem !important;
 }
 
 .mr-3,
