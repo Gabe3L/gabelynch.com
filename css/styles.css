@@ -1026,7 +1026,7 @@ mark,
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1240px;
+    max-width: 1450px;
   }
 }
 
@@ -2680,14 +2680,6 @@ h5,
     padding-bottom: 1rem;
     padding-top: 0;
     color: var(--white);
-  }
-}
-
-@media (min-width: 992px) {
-  .ftco-navbar .container {
-    width: 1110px;
-    margin: 0 auto;
-    padding: 0;
   }
 }
 
