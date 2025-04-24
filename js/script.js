@@ -41,7 +41,7 @@ tabButtons.forEach(button => {
             content.classList.remove('active');
         });
 
-        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabButtons.forEach(button => button.classList.remove('active'));
 
         if (targetContent) {
             targetContent.style.display = 'flex';

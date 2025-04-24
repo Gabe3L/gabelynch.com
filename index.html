@@ -5,7 +5,8 @@
 	<title>Gabe Lynch - Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Gabe Lynch's personal developer portfolio website. Shows personal projects, resume, contact and more.">
+	<meta name="description"
+		content="Gabe Lynch's personal developer portfolio website. Shows personal projects, resume, contact and more.">
 
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
@@ -22,7 +23,8 @@
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-me-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#technologies-section" class="nav-link"><span>Technologies</span></a></li>
+					<li class="nav-item"><a href="#technologies-section" class="nav-link"><span>Technologies</span></a>
+					</li>
 					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ol>
@@ -33,8 +35,7 @@
 	<section id="home-section" class="section">
 		<div class="container">
 			<div class="image-wrapper image-col">
-				<img src="assets/images/profile/headshot.webp" alt="Portrait of Gabe Lynch"
-					class="profile-img">
+				<img src="assets/images/profile/headshot.webp" alt="Portrait of Gabe Lynch" class="profile-img">
 			</div>
 			<div class="text text-col animate">
 				<h1>Hello! <span>I'm</span></h1>
@@ -47,7 +48,8 @@
 	<section id="about-me-section" class="section">
 		<div class="container">
 			<div class="row">
-				<div class="about-me-img animate" style="background-image:url(assets/images/profile/about-me.webp);"></div>
+				<div class="about-me-img animate" style="background-image:url(assets/images/profile/about-me.webp);">
+				</div>
 				<div class="about-me-box animate">
 					<h2>About Me</h2>
 					<p>Hi, my name is Gabe Lynch! I'm a passionate and driven student with a
@@ -121,10 +123,9 @@
 					</p>
 				</div>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center animate">
-					<p><a href="assets/documents/resume.pdf" download class="btn btn-primary py-4 px-5">Download CV</a>
-					</p>
+			<div class="row justify-content-center animate">
+				<div class="button-primary">
+					<p><a href="assets/documents/resume.pdf" download class="button button-primary">Download CV</a></p>
 				</div>
 			</div>
 		</div>
@@ -139,63 +140,63 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-4 tab-button animate" data-tab="programming-languages">
-					<button class="btn">
-					  Programming Languages
+				<div class="technology-container tab-button animate" data-tab="programming-languages">
+					<button class="button">
+						Programming Languages
 					</button>
-				  </div>
-				  <div class="col-md-4 tab-button animate" data-tab="machine-learning">
-					<button class="btn">
-					  Machine Learning
+				</div>
+				<div class="technology-container tab-button animate" data-tab="machine-learning">
+					<button class="button">
+						Machine Learning
 					</button>
-				  </div>
-				  <div class="col-md-4 tab-button animate" data-tab="web-development">
-					<button class="btn">
-					  Web Development
+				</div>
+				<div class="technology-container tab-button animate" data-tab="web-development">
+					<button class="button">
+						Web Development
 					</button>
-				  </div>
+				</div>
 			</div>
 
 			<div id="programming-languages" class="tab-content row justify-content-center" style="display: none;">
-				<div class="col-md-3 tech-box">
+				<div class="tech-box">
 					<img src="assets/images/technologies/python.svg" alt="Python" class="tech-logo" loading="lazy" />
 					<h5>Python</h5>
 				</div>
-				<div class="col-md-3 tech-box">
+				<div class="tech-box">
 					<img src="assets/images/technologies/java.svg" alt="Java" class="tech-logo" loading="lazy" />
 					<h5>Java</h5>
 				</div>
-				<div class="col-md-3 tech-box">
+				<div class="tech-box">
 					<img src="assets/images/technologies/cpp.svg" alt="C++" class="tech-logo" loading="lazy" />
 					<h5>C++</h5>
 				</div>
 			</div>
 
 			<div id="machine-learning" class="tab-content row justify-content-center" style="display: none;">
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/pytorch.svg" alt="PyTorch" class="tech-logo" loading="lazy" />
 					<h5>PyTorch</h5>
 				</div>
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/yolo.svg" alt="YOLO" class="tech-logo" loading="lazy" />
 					<h5>YOLO</h5>
 				</div>
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/opencv.svg" alt="OpenCV" class="tech-logo" loading="lazy" />
 					<h5>OpenCV</h5>
 				</div>
 			</div>
 
 			<div id="web-development" class="tab-content row justify-content-center" style="display: none;">
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/html.svg" alt="HTML" class="tech-logo" loading="lazy" />
 					<h5>HTML</h5>
 				</div>
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/css.svg" alt="CSS" class="tech-logo" loading="lazy" />
 					<h5>CSS</h5>
 				</div>
-				<div class="col-md-3 text-center tech-box">
+				<div class="text-center tech-box">
 					<img src="assets/images/technologies/javascript.svg" alt="JavaScript" class="tech-logo"
 						loading="lazy" />
 					<h5>JavaScript</h5>
@@ -214,7 +215,7 @@
 					programming, robotics and design.</p>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="project-container">
 					<a href="https://github.com/FRCTeam3756/2025-FRCRobot">
 						<div class="project img animate justify-content-center align-items-center"
 							style="background-image: url(assets/images/projects/ramferno-2025.webp);">
@@ -226,19 +227,19 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4">
+				<div class="project-container">
 					<!-- <a href="#"> -->
-						<div class="project img animate justify-content-center align-items-center"
-							style="background-image: url(assets/images/projects/gaia.webp);">
-							<div class="overlay"></div>
-							<div class="text text-center">
-								<h3>Project GAIA</h3>
-								<span>In Progress</span>
-							</div>
+					<div class="project img animate justify-content-center align-items-center"
+						style="background-image: url(assets/images/projects/gaia.webp);">
+						<div class="overlay"></div>
+						<div class="text text-center">
+							<h3>Project GAIA</h3>
+							<span>In Progress</span>
 						</div>
+					</div>
 					<!-- </a> -->
 				</div>
-				<div class="col-md-4">
+				<div class="project-container">
 					<a href="https://github.com/Gabe3L/ClickMaster">
 						<div class="project img animate justify-content-center align-items-center"
 							style="background-image: url(assets/images/projects/clickmaster.webp);">
