@@ -2,18 +2,18 @@
 
 (function ($) {
     function initializeScrollAnimations() {
-		$('.ftco-animate').waypoint(function (direction) {
+		$('.animate').waypoint(function (direction) {
             const element = $(this.element);
 
-			if (direction === 'down' && !element.hasClass('ftco-animated')) {
+			if (direction === 'down' && !element.hasClass('animated')) {
 				element.addClass('item-animate');
 				setTimeout(function () {
-                    $('body .ftco-animate.item-animate').each(function (index) {
+                    $('body .animate.item-animate').each(function (index) {
                         const item = $(this);
 
                         // Stagger each animation by 30ms
                         setTimeout(function () {
-                            item.addClass('fadeInUp ftco-animated');
+                            item.addClass('fadeInUp animated');
                         }, index * 20);
                     });
                 }, 100);
