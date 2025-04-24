@@ -520,8 +520,6 @@
 #projects-section .project-container {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 #projects-section .project {
@@ -864,12 +862,10 @@ h1,
 h2,
 h3,
 h4,
-h5,
 .h1,
 .h2,
 .h3,
-.h4,
-.h5 {
+.h4 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -892,11 +888,6 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1.5rem;
-}
-
-h5,
-.h5 {
   font-size: 1.25rem;
 }
 
@@ -1241,92 +1232,6 @@ a.badge:focus {
   vertical-align: text-bottom !important;
 }
 
-.bg-secondary {
-  background-color: var(--light-grey) !important;
-}
-
-a.bg-secondary:hover,
-a.bg-secondary:focus,
-button.bg-secondary:hover,
-button.bg-secondary:focus {
-  background-color: var(--medium-grey) !important;
-}
-
-a.bg:hover,
-a.bg:focus,
-button.bg:hover,
-button.bg:focus {
-  background-color: var(--white) !important;
-}
-
-.bg-white {
-  background-color: var(--white) !important;
-}
-
-.bg-transparent {
-  background-color: transparent !important;
-}
-
-.border-0 {
-  border: 0 !important;
-}
-
-.border-right-0 {
-  border-right: 0 !important;
-}
-
-.border-bottom-0 {
-  border-bottom: 0 !important;
-}
-
-.border-left-0 {
-  border-left: 0 !important;
-}
-
-.border-secondary {
-  border-color: var(--light-grey) !important;
-}
-
-.border-white {
-  border-color: var(--white) !important;
-}
-
-.d-none {
-  display: none !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.d-flex {
-  display: flex !important;
-}
-
-.flex-column {
-  flex-direction: column !important;
-}
-
-.flex-column-reverse {
-  flex-direction: column-reverse !important;
-}
-
-.flex-wrap {
-  flex-wrap: wrap !important;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap !important;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse !important;
-}
-
-.flex-fill {
-  flex: 1 1 auto !important;
-}
-
 .justify-content-center {
   justify-content: center !important;
 }
@@ -1498,12 +1403,10 @@ h1,
 h2,
 h3,
 h4,
-h5,
 .h1,
 .h2,
 .h3,
-.h4,
-.h5 {
+.h4 {
   line-height: 1.5;
   color: white;
   font-weight: 400;
@@ -1620,10 +1523,6 @@ h5,
   transform: scaleX(1);
 }
 
-.bg-primary {
-  background: var(--primary);
-}
-
 .button {
   cursor: pointer;
   border-radius: 40px;
@@ -1664,10 +1563,6 @@ h5,
 .animate {
   opacity: 0;
   visibility: hidden;
-}
-
-.bg-primary {
-  background: var(--primary) !important;
 }
 
 .section {
