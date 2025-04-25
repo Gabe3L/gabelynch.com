@@ -112,8 +112,6 @@ h4,
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -131,12 +129,6 @@ h4,
 }
 
 @media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1199.98px) {
   .container {
     max-width: 70%;
   }
@@ -164,7 +156,7 @@ button {
   flex-wrap: wrap;
 }
 
-navbar {
+nav {
   display: flex;
   padding: 0.5rem 1rem;
 }
@@ -179,8 +171,6 @@ navbar {
 .navbar-logo {
   color: var(--white);
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
