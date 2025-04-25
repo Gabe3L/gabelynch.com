@@ -1,5 +1,66 @@
 @import url("constants.css");
 
+#navbar .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#navbar .navbar-link {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#navbar .navbar-logo {
+    color: var(--white);
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+#navbar .navbar-menu {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+}
+
+@media (max-width: 991.98px) {
+    #navbar .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    #navbar .navbar-menu.show {
+        display: flex;
+    }
+
+    #navbar .navbar-toggle {
+        display: block;
+    }
+}
+
 #home-section .profile-img {
     background-size: cover;
     background-position: center;
@@ -29,8 +90,7 @@
     margin-bottom: 1.5rem
 }
 
-#home-section h3,
-#home-section h3 span {
+#home-section h3 {
     font-size: 1.5em;
     color: var(--white);
     font-weight: 400;
@@ -94,16 +154,11 @@
     }
 
     #home-section .text-col {
-        width: 50%;
         text-align: left;
     }
 
     #home-section h1 {
         font-size: 2.7rem;
-    }
-
-    #home-section .image-col {
-        width: 50%;
     }
 }
 
@@ -129,8 +184,6 @@
 
 /* About Me Section */
 #about-me-section .row {
-    display: flex;
-    flex-wrap: wrap;
     align-items: stretch;
     gap: 30px;
 }
@@ -204,6 +257,7 @@
 
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {
+
     #about-me-section .about-me-img,
     #about-me-section .about-me-text {
         min-height: 390px;
@@ -458,8 +512,8 @@
 }
 
 /* Contact Section */
-#contact-section .section {
-    padding-bottom: 0em;
+#contact-section.section {
+    padding-bottom: 3em;
 }
 
 #contact-section .contact-logo {
@@ -499,4 +553,13 @@
         width: 55px;
         height: 55px;
     }
+}
+
+#footer.footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    text-align: center;
+    justify-content: center;
 }

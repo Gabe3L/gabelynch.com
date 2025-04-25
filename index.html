@@ -9,20 +9,21 @@
 
 	<link rel="stylesheet" href="public/css/styles.css">
 	<link rel="stylesheet" href="public/css/sections.css">
+	<link rel="stylesheet" href="public/css/animations.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 	<link rel="icon" href="public/assets/images/favicon/favicon.webp" type="image/webp">
 </head>
 
 <body>
-	<nav>
+	<nav id="navbar">
 		<div class="container">
 			<a class="navbar-logo" href="index.html">Gabe Lynch</a>
 
-			<button class="navbar-toggle" id="navbar-toggle" aria-label="Navbar Toggle">
+			<button class="navbar-toggle">
 				&#9776;
 			</button>
 
-			<ol class="navbar-menu" id="navbar-menu">
+			<ol class="navbar-menu">
 				<li><a href="#home-section" class="navbar-link">Home</a></li>
 				<li><a href="#about-me-section" class="navbar-link">About</a></li>
 				<li><a href="#resume-section" class="navbar-link">Resume</a></li>
@@ -35,10 +36,10 @@
 
 	<section id="home-section" class="section">
 		<div class="container">
-			<div class="image-col animate">
+			<div class="image-col animate-on-scroll">
 				<img src="public/assets/images/profile/headshot.webp" alt="Portrait of Gabe Lynch" class="profile-img">
 			</div>
-			<div class="text-col animate">
+			<div class="text-col animate-on-scroll">
 				<h1>Hello! <span>I'm</span></h1>
 				<h2>Gabe Lynch</h2>
 				<h3>A software developer and student from London, ON, Canada.</h3>
@@ -49,7 +50,7 @@
 	<section id="about-me-section" class="section">
 		<div class="container">
 			<div class="row">
-				<div class="about-me-text animate">
+				<div class="about-me-text animate-on-scroll">
 					<h2>About Me</h2>
 					<p>Hi, my name is Gabe Lynch! I'm a passionate and driven student with a
 						deep interest in technology, music, and sports. I specialize in
@@ -64,7 +65,7 @@
 						<strong>English</strong> and <strong>French</strong>.
 					</p>
 				</div>
-				<div class="about-me-img animate"
+				<div class="about-me-img animate-on-scroll"
 					style="background-image:url(public/assets/images/profile/about-me.webp);">
 				</div>
 			</div>
@@ -73,12 +74,12 @@
 
 	<section id="resume-section" class="section">
 		<div class="container">
-			<header class="section-header animate">
+			<header class="section-header animate-on-scroll">
 				<h1>Resume</h1>
 				<h2>Resume</h2>
 			</header>
 			<div class="row">
-				<div class="resume-box animate">
+				<div class="resume-box animate-on-scroll">
 					<span class="date">Class of 2026</span>
 					<span class="position">High School Diploma</span>
 					<span class="location">Sir Wilfrid Laurier S.S.</span>
@@ -89,7 +90,7 @@
 						Unsung Hero and Computer Science Awards.
 					</p>
 				</div>
-				<div class="resume-box animate">
+				<div class="resume-box animate-on-scroll">
 					<span class="date">2024</span>
 					<span class="position">Producer's Assistant</span>
 					<span class="location">Bone Vault Inc.</span>
@@ -100,7 +101,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="resume-box animate">
+				<div class="resume-box animate-on-scroll">
 					<span class="date">2023 - Now</span>
 					<span class="position">Lead Programmer</span>
 					<span class="location">FRC Team 3756</span>
@@ -112,7 +113,7 @@
 						elementary students to become interested in technology.
 					</p>
 				</div>
-				<div class="resume-box animate">
+				<div class="resume-box animate-on-scroll">
 					<span class="date">2024</span>
 					<span class="position">Program Director</span>
 					<span class="location">CampFerno</span>
@@ -126,7 +127,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="button animate">
+				<div class="button animate-on-scroll">
 					<a href="assets/documents/resume.pdf" download>
 						<p>Download CV</p>
 					</a>
@@ -137,19 +138,19 @@
 
 	<section id="technologies-section" class="section">
 		<div class="container">
-			<header class="section-header animate">
+			<header class="section-header animate-on-scroll">
 				<h1>Technologies</h1>
 				<h2>Technologies</h2>
 			</header>
 
 			<div class="row">
-				<div class="technology-container tab-button animate" data-tab="programming-languages">
+				<div class="technology-container tab-button animate-on-scroll" data-tab="programming-languages">
 					<button class="button">Programming Languages</button>
 				</div>
-				<div class="technology-container tab-button animate" data-tab="machine-learning">
+				<div class="technology-container tab-button animate-on-scroll" data-tab="machine-learning">
 					<button class="button">Machine Learning</button>
 				</div>
-				<div class="technology-container tab-button animate" data-tab="web-development">
+				<div class="technology-container tab-button animate-on-scroll" data-tab="web-development">
 					<button class="button">Web Development</button>
 				</div>
 			</div>
@@ -218,7 +219,7 @@
 
 	<section id="projects-section" class="section">
 		<div class="container">
-			<header class="section-header animate">
+			<header class="section-header animate-on-scroll">
 				<h1>Recent Projects</h1>
 				<h2>Recent Projects</h2>
 				<p>A collection of personal, academic, and team-based projects showcasing my knowledge in
@@ -258,7 +259,7 @@
 
 	<section id="contact-section" class="section">
 		<div class="container">
-			<header class="section-header animate">
+			<header class="section-header animate-on-scroll">
 				<h1>Contact</h1>
 				<h2>Contact</h2>
 			</header>
@@ -298,9 +299,6 @@
 	<script>
 		document.getElementById("year").textContent = new Date().getFullYear();
 	</script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
 	<script src="public/js/script.js"></script>
 </body>

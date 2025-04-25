@@ -1,60 +1,54 @@
 // Sitewide Animations
 
-(function ($) {
+document.addEventListener('DOMContentLoaded', function () {
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight &&
+            rect.bottom >= 0
+        );
+    }
+
     function initializeScrollAnimations() {
-        $('.animate').waypoint(function (direction) {
-            const element = $(this.element);
+        const elements = document.querySelectorAll('.animate-on-scroll');
 
-            if (direction === 'down' && !element.hasClass('animated')) {
-                element.addClass('item-animate');
-                setTimeout(function () {
-                    $('body .animate.item-animate').each(function (index) {
-                        const item = $(this);
-
-                        // Stagger each animation by 30ms
-                        setTimeout(function () {
-                            item.addClass('fadeInUp animated');
-                        }, index * 20);
-                    });
-                }, 100);
+        elements.forEach(element => {
+            if (isInViewport(element)) {
+                element.classList.add('fade-in-up');
             }
-
-        }, {
-            offset: '95%' // Trigger when the element is 95% into the viewport
         });
     };
 
-    initializeScrollAnimations();
-})(jQuery);
+    window.addEventListener('scroll', initializeScrollAnimations);
+    window.addEventListener('load', initializeScrollAnimations);
 
-// Technology Buttons
+    // Technology Buttons
 
-const tabButtons = document.querySelectorAll('.tab-button');
+    const tabButtons = document.querySelectorAll('.tab-button');
 
-tabButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const targetTabId = this.getAttribute('data-tab');
-        const targetContent = document.getElementById(targetTabId);
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetTabId = this.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetTabId);
 
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.style.display = 'none';
-            content.classList.remove('active');
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            });
+
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            if (targetContent) {
+                targetContent.style.display = 'flex';
+                targetContent.classList.add('active');
+            }
+
+            this.classList.add('active');
         });
-
-        tabButtons.forEach(button => button.classList.remove('active'));
-
-        if (targetContent) {
-            targetContent.style.display = 'flex';
-            targetContent.classList.add('active');
-        }
-
-        this.classList.add('active');
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('navbar-toggle');
-    const menu = document.getElementById('navbar-menu');
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const menu = document.querySelector('.navbar-menu');
 
     if (toggleButton && menu) {
         toggleButton.addEventListener('click', function () {
