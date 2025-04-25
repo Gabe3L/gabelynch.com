@@ -4,40 +4,36 @@
 <head>
 	<title>Gabe Lynch - Home</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description"
-		content="Gabe Lynch's personal developer portfolio website. Shows personal projects, resume, contact and more.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gabe Lynch's personal developer portfolio website.">
 
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="public/css/styles.css">
+	<link rel="stylesheet" href="public/css/sections.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-
-	<link rel="icon" href="assets/images/favicon/favicon.webp" type="image/webp" />
+	<link rel="icon" href="public/assets/images/favicon/favicon.webp" type="image/webp">
 </head>
 
 <body>
-	<nav id="navbar" class="navbar">
+	<navbar>
 		<div class="container">
 			<a class="navbar-logo" href="index.html">Gabe Lynch</a>
-			<div class="navbar-collapse">
-				<ol class="navbar-menu">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-me-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#technologies-section" class="nav-link"><span>Technologies</span></a>
-					</li>
-					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ol>
-			</div>
+			<ol class="navbar-menu">
+				<li><a href="#home-section" class="navbar-link">Home</a></li>
+				<li><a href="#about-me-section" class="navbar-link">About</a></li>
+				<li><a href="#resume-section" class="navbar-link">Resume</a></li>
+				<li><a href="#technologies-section" class="navbar-link">Technologies</a></li>
+				<li><a href="#projects-section" class="navbar-link">Projects</a></li>
+				<li><a href="#contact-section" class="navbar-link">Contact</a></li>
+			</ol>
 		</div>
-	</nav>
+	</navbar>
 
 	<section id="home-section" class="section">
 		<div class="container">
-			<div class="image-wrapper image-col">
-				<img src="assets/images/profile/headshot.webp" alt="Portrait of Gabe Lynch" class="profile-img">
+			<div class="image-col animate">
+				<img src="public/assets/images/profile/headshot.webp" alt="Portrait of Gabe Lynch" class="profile-img">
 			</div>
-			<div class="text text-col animate">
+			<div class="text-col animate">
 				<h1>Hello! <span>I'm</span></h1>
 				<h2>Gabe Lynch</h2>
 				<h3>A software developer and student from London, ON, Canada.</h3>
@@ -48,9 +44,7 @@
 	<section id="about-me-section" class="section">
 		<div class="container">
 			<div class="row">
-				<div class="about-me-img animate" style="background-image:url(assets/images/profile/about-me.webp);">
-				</div>
-				<div class="about-me-box animate">
+				<div class="about-me-text animate">
 					<h2>About Me</h2>
 					<p>Hi, my name is Gabe Lynch! I'm a passionate and driven student with a
 						deep interest in technology, music, and sports. I specialize in
@@ -65,16 +59,19 @@
 						<strong>English</strong> and <strong>French</strong>.
 					</p>
 				</div>
+				<div class="about-me-img animate"
+					style="background-image:url(public/assets/images/profile/about-me.webp);">
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="resume-section" class="section">
 		<div class="container">
-			<div class="section-header animate">
+			<header class="section-header animate">
 				<h1>Resume</h1>
 				<h2>Resume</h2>
-			</div>
+			</header>
 			<div class="row">
 				<div class="resume-box animate">
 					<span class="date">Class of 2026</span>
@@ -135,72 +132,80 @@
 
 	<section id="technologies-section" class="section">
 		<div class="container">
-			<div class="section-header animate">
+			<header class="section-header animate">
 				<h1>Technologies</h1>
 				<h2>Technologies</h2>
-			</div>
+			</header>
 
 			<div class="row">
 				<div class="technology-container tab-button animate" data-tab="programming-languages">
-					<button class="button">
-						Programming Languages
-					</button>
+					<button class="button">Programming Languages</button>
 				</div>
 				<div class="technology-container tab-button animate" data-tab="machine-learning">
-					<button class="button">
-						Machine Learning
-					</button>
+					<button class="button">Machine Learning</button>
 				</div>
 				<div class="technology-container tab-button animate" data-tab="web-development">
-					<button class="button">
-						Web Development
-					</button>
+					<button class="button">Web Development</button>
 				</div>
 			</div>
 
-			<div id="programming-languages" class="tab-content row justify-content-center" style="display: none;">
-				<div class="tech-box">
-					<img src="assets/images/technologies/python.svg" alt="Python" class="tech-logo" loading="lazy" />
-					<h4>Python</h4>
-				</div>
-				<div class="tech-box">
-					<img src="assets/images/technologies/java.svg" alt="Java" class="tech-logo" loading="lazy" />
-					<h4>Java</h4>
-				</div>
-				<div class="tech-box">
-					<img src="assets/images/technologies/cpp.svg" alt="C++" class="tech-logo" loading="lazy" />
-					<h4>C++</h4>
-				</div>
-			</div>
-
-			<div id="machine-learning" class="tab-content row justify-content-center" style="display: none;">
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/pytorch.svg" alt="PyTorch" class="tech-logo" loading="lazy" />
-					<h4>PyTorch</h4>
-				</div>
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/yolo.svg" alt="YOLO" class="tech-logo" loading="lazy" />
-					<h4>YOLO</h4>
-				</div>
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/opencv.svg" alt="OpenCV" class="tech-logo" loading="lazy" />
-					<h4>OpenCV</h4>
+			<div class="row">
+				<div class="tech-category tab-content active" id="programming-languages">
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/python.svg" alt="Python" class="tech-logo"
+							loading="lazy" />
+						<h4>Python</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/java.svg" alt="Java" class="tech-logo"
+							loading="lazy" />
+						<h4>Java</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/cpp.svg" alt="C++" class="tech-logo"
+							loading="lazy" />
+						<h4>C++</h4>
+					</div>
 				</div>
 			</div>
 
-			<div id="web-development" class="tab-content row justify-content-center" style="display: none;">
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/html.svg" alt="HTML" class="tech-logo" loading="lazy" />
-					<h4>HTML</h4>
+			<div class="row">
+				<div class="tech-category tab-content active" id="machine-learning">
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/pytorch.svg" alt="PyTorch" class="tech-logo"
+							loading="lazy" />
+						<h4>PyTorch</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/yolo.svg" alt="YOLO" class="tech-logo"
+							loading="lazy" />
+						<h4>YOLO</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/opencv.svg" alt="OpenCV" class="tech-logo"
+							loading="lazy" />
+						<h4>OpenCV</h4>
+					</div>
 				</div>
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/css.svg" alt="CSS" class="tech-logo" loading="lazy" />
-					<h4>CSS</h4>
-				</div>
-				<div class="text-center tech-box">
-					<img src="assets/images/technologies/javascript.svg" alt="JavaScript" class="tech-logo"
-						loading="lazy" />
-					<h4>JavaScript</h4>
+			</div>
+
+			<div class="row">
+				<div class="tech-category tab-content active" id="web-development">
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/html.svg" alt="HTML" class="tech-logo"
+							loading="lazy" />
+						<h4>HTML</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/css.svg" alt="CSS" class="tech-logo"
+							loading="lazy" />
+						<h4>CSS</h4>
+					</div>
+					<div class="tech-box">
+						<img src="public/assets/images/technologies/javascript.svg" alt="JavaScript" class="tech-logo"
+							loading="lazy" />
+						<h4>JavaScript</h4>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -208,90 +213,75 @@
 
 	<section id="projects-section" class="section">
 		<div class="container">
-			<div class="section-header animate">
+			<header class="section-header animate">
 				<h1>Recent Projects</h1>
 				<h2>Recent Projects</h2>
 				<p>A collection of personal, academic, and team-based projects showcasing my knowledge in
 					programming, robotics and design.</p>
-			</div>
+			</header>
 			<div class="row">
 				<div class="project-container">
-					<a href="https://github.com/FRCTeam3756/2025-FRCRobot">
-						<div class="project project-img animate justify-content-center align-items-center"
-							style="background-image: url(assets/images/projects/ramferno-2025.webp);">
-							<div class="overlay"></div>
-							<div class="text text-center">
-								<h3>RamFerno Robotics Codebase</h3>
-								<span>2025</span>
-							</div>
+					<a href="https://github.com/FRCTeam3756/2025-FRCRobot" class="project"
+						style="background-image: url(public/assets/images/projects/ramferno-2025.webp);">
+						<div class="overlay">
+							<h3>RamFerno Robotics Codebase</h3>
+							<h4>2025</h4>
 						</div>
 					</a>
 				</div>
+
 				<div class="project-container">
-					<!-- <a href="#"> -->
-					<div class="project project-img animate justify-content-center align-items-center"
-						style="background-image: url(assets/images/projects/gaia.webp);">
-						<div class="overlay"></div>
-						<div class="text text-center">
+					<div class="project" style="background-image: url(public/assets/images/projects/gaia.webp);">
+						<div class="overlay">
 							<h3>Project GAIA</h3>
-							<span>In Progress</span>
+							<h4>In Progress</h4>
 						</div>
 					</div>
-					<!-- </a> -->
 				</div>
+
 				<div class="project-container">
-					<a href="https://github.com/Gabe3L/ClickMaster">
-						<div class="project project-img animate justify-content-center align-items-center"
-							style="background-image: url(assets/images/projects/clickmaster.webp);">
-							<div class="overlay"></div>
-							<div class="text text-center">
-								<h3>ClickMaster</h3>
-								<span>2025</span>
-							</div>
+					<a href="https://github.com/Gabe3L/ClickMaster" class="project"
+						style="background-image: url(public/assets/images/projects/clickmaster.webp);">
+						<div class="overlay">
+							<h3>ClickMaster</h3>
+							<h4>2025</h4>
 						</div>
 					</a>
 				</div>
 			</div>
-		</div>
 	</section>
 
-	<section id="contact-section" class="section no-pb">
+	<section id="contact-section" class="section">
 		<div class="container">
-			<div class="section-header animate">
+			<header class="section-header animate">
 				<h1>Contact</h1>
 				<h2>Contact</h2>
-			</div>
+			</header>
 
-			<div class="contact-icons">
-				<div class="contact-icon-box">
-					<a href="mailto:contact@gabelynch.com" class="icon" aria-label="Email">
-						<svg xmlns="http://www.w3.org/2000/svg" class="contact-logo" viewBox="0 0 24 24">
-							<path
-								d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z" />
-						</svg>
-					</a>
-				</div>
-				<div class="contact-icon-box">
-					<a href="https://www.linkedin.com/in/gabe-lynch/" class="icon" aria-label="LinkedIn">
-						<svg xmlns="http://www.w3.org/2000/svg" class="contact-logo" viewBox="-143 145 512 512">
-							<path
-								d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h46.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z" />
-						</svg>
-					</a>
-				</div>
-				<div class="contact-icon-box">
-					<a href="https://github.com/Gabe3L" class="icon" aria-label="GitHub">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="contact-logo">
-							<g transform="translate(-140.000000, -7559.000000)">
-								<g transform="translate(56.000000, 160.000000)">
-									<path
-										d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
-									</path>
-								</g>
+			<div class="row">
+				<a href="mailto:contact@gabelynch.com" class="icon" aria-label="Email">
+					<svg xmlns="http://www.w3.org/2000/svg" class="contact-logo" viewBox="0 0 24 24">
+						<path
+							d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z" />
+					</svg>
+				</a>
+				<a href="https://www.linkedin.com/in/gabe-lynch/" class="icon" aria-label="LinkedIn">
+					<svg xmlns="http://www.w3.org/2000/svg" class="contact-logo" viewBox="-143 145 512 512">
+						<path
+							d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h46.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z" />
+					</svg>
+				</a>
+				<a href="https://github.com/Gabe3L" class="icon" aria-label="GitHub">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="contact-logo">
+						<g transform="translate(-140.000000, -7559.000000)">
+							<g transform="translate(56.000000, 160.000000)">
+								<path
+									d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
+								</path>
 							</g>
-						</svg>
-					</a>
-				</div>
+						</g>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -307,7 +297,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-	<script src="script.js"></script>
+	<script src="public/js/script.js"></script>
 </body>
 
 </html>

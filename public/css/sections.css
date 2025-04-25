@@ -1,0 +1,502 @@
+@import url("constants.css");
+
+#home-section .profile-img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#home-section h1 {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+#home-section h1 {
+    color: var(--light);
+}
+
+#home-section h1 span {
+    color: var(--white);
+}
+
+#home-section h2 {
+    color: var(--light);
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem
+}
+
+#home-section h3,
+#home-section h3 span {
+    font-size: 1.5em;
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem
+}
+
+#home-section .text-col {
+    order: 1;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 30px;
+}
+
+#home-section .image-col {
+    order: 2;
+    width: 50%;
+    flex-grow: 1;
+}
+
+/* Phone (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    #home-section .container {
+        display: flex;
+    }
+
+    #home-section h1,
+    #home-section h1 span,
+    #home-section h2,
+    #home-section h3,
+    #home-section h4 {
+        text-align: center;
+    }
+
+    #home-section h1 {
+        font-size: 4rem;
+    }
+
+    #home-section h3 {
+        font-size: 2rem;
+    }
+
+    #home-section h4 {
+        font-size: 1.4rem;
+    }
+
+    #home-section .profile-img {
+        display: none;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #home-section .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #home-section .text-col {
+        width: 50%;
+        text-align: left;
+    }
+
+    #home-section h1 {
+        font-size: 2.7rem;
+    }
+
+    #home-section .image-col {
+        width: 50%;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    #home-section .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #home-section .text-col {
+        width: 50%;
+        text-align: left;
+    }
+
+    #home-section .image-col {
+        width: 50%;
+        flex-grow: 1;
+    }
+}
+
+/* About Me Section */
+#about-me-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 30px;
+}
+
+#about-me-section .about-me-img,
+#about-me-section .about-me-text {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#about-me-section .about-me-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+}
+
+#about-me-section .about-me-text {
+    background-color: var(--transparent-grey);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-me-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Phone (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    #about-me-section .row {
+        flex-direction: column;
+    }
+
+    #about-me-section .about-me-img,
+    #about-me-section .about-me-text {
+        width: 100%;
+        height: auto;
+    }
+
+    #about-me-section .about-me-text {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #about-me-section h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #about-me-section p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #about-me-section .about-me-text {
+        padding: 15px;
+        font-size: 0.84rem;
+    }
+
+    #about-me-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    #about-me-section .about-me-img,
+    #about-me-section .about-me-text {
+        min-height: 390px;
+    }
+}
+
+/* Resume Section */
+#resume-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#resume-section .resume-box {
+    flex: 1 1 calc(50% - 15px);
+    background: var(--transparent-grey);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#resume-section .date {
+    display: block;
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--primary);
+}
+
+#resume-section .position {
+    display: block;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+#resume-section .location {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#resume-section p {
+    margin-top: 1.5rem
+}
+
+#resume-section .button {
+    background-color: var(--primary);
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#resume-section .button:hover {
+    background-color: var(--light);
+}
+
+#resume-section .button p {
+    color: var(--black);
+    margin: 0.2em;
+}
+
+/* Technologies Section */
+#technologies-section .tech-box {
+    text-align: center;
+    margin: 40px;
+    background: var(--dark);
+    border-radius: 16px;
+    padding: 25px 15px;
+    box-shadow: 0 0 10px var(--dark);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--primary);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#technologies-section .tech-category {
+    display: none;
+}
+
+#technologies-section .tech-box:hover {
+    box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
+}
+
+#technologies-section .tech-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+#technologies-section .tab-button {
+    width: 100%;
+}
+
+#technologies-section button {
+    width: 100%;
+    font-weight: 600;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid var(--light);
+    color: var(--white);
+    transition: background 0.3s, color 0.3s;
+}
+
+#technologies-section button:hover {
+    background-color: var(--light);
+    color: var(--white);
+}
+
+#technologies-section .technology-container {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Tablet (min-width: 768px and max-width: 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #technologies-section .technology-container {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    #technologies-section .tech-box {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    #technologies-section .technology-container {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    #technologies-section .tech-box {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Projects Section */
+#projects-section .project-container {
+    width: 100%;
+}
+
+#projects-section .project {
+    position: relative;
+    width: 100%;
+    height: 285px;
+    border-radius: 15px;
+    max-width: 350px;
+    margin: 0 auto 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#projects-section .overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: var(--primary);
+    z-index: 0;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: auto;
+    text-align: center;
+}
+
+#projects-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+#projects-section h4 {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#projects-section .project:hover .overlay,
+#projects-section .project:focus .overlay {
+    opacity: .75;
+}
+
+#projects-section .project:hover .text,
+#projects-section .project:focus .text {
+    opacity: 1;
+}
+
+/* Phone (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    #projects-section .project {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Tablet (min-width: 768px and max-width: 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #projects-section .project-container {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    #projects-section .project {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    #projects-section .project-container {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+/* Contact Section */
+#contact-section .section {
+    padding-bottom: 0em;
+}
+
+#contact-section .contact-logo {
+    width: 70px;
+    height: 70px;
+    fill: var(--primary);
+}
+
+#contact-section .icon {
+    width: 120px;
+    height: 120px;
+    background: var(--transparent-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background 0.1s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+#contact-section .icon:hover {
+    background: var(--light);
+    transform: scale(1.1);
+}
+
+/* Phone (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    #contact-section .icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    #contact-section .contact-logo {
+        width: 55px;
+        height: 55px;
+    }
+}
