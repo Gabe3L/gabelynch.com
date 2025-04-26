@@ -1,5 +1,64 @@
 @import url("constants.css");
 
+a {
+  color: var(--white);
+  text-decoration: none;
+  transition: .3s all ease;
+}
+
+a:hover {
+  color: var(--light);
+}
+
+button:focus {
+  outline: 1px dotted;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: visible;
+}
+
+nav {
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--black);
+  line-height: 1.8;
+  color: var(--light-grey);
+}
+
 .section-header {
   display: flex;
   justify-content: center;
@@ -45,40 +104,15 @@
   }
 }
 
-
-a {
-  color: var(--white);
-  text-decoration: none;
+.section {
+  padding: 7em 0;
+  position: relative;
 }
 
-button:focus {
-  outline: 1px dotted;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: white;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.25rem;
+@media (max-width: 767.98px) {
+  .section {
+    padding: 6em 0;
+  }
 }
 
 .container {
@@ -90,21 +124,21 @@ h4 {
   position: relative;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 768px) {
   .container {
-    max-width: 540px;
+    max-width: 90vw;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .container {
-    max-width: 720px;
+    max-width: 90vw;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 70%;
+    max-width: 75vw;
   }
 }
 
@@ -113,49 +147,4 @@ h4 {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-}
-
-button {
-  margin: 0;
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.5;
-  overflow: visible;
-  text-transform: none;
-  border-radius: 0;
-}
-
-nav {
-  display: flex;
-  padding: 0.5rem 1rem;
-}
-
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: var(--black);
-  font-size: 16px;
-  line-height: 1.8;
-  font-weight: 400;
-  color: var(--light-grey);
-}
-
-a {
-  transition: .3s all ease;
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--light);
-}
-
-.section {
-  padding: 7em 0;
-  position: relative;
-}
-
-@media (max-width: 767.98px) {
-  .section {
-    padding: 6em 0;
-  }
 }

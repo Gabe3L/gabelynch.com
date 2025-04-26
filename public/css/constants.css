@@ -1,4 +1,5 @@
 :root {
+    /* Colours */
     --primary: #893eb5;
     --light: #a855f7;
     --dark: #1f1534;
@@ -9,6 +10,9 @@
     --dark-grey: #191919;
     --transparent-grey: #ffffff1a;
     --black: #000;
+
+    /* Sizing */
+    --box-border-radius: 8px;
   }
   
   *,
