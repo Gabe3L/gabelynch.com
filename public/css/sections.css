@@ -357,6 +357,10 @@
     cursor: pointer;
 }
 
+#technologies-section p {
+    display: none;
+}
+
 #technologies-section .tech-box {
     display: flex;
     flex-direction: column;
@@ -386,6 +390,19 @@
     #technologies-section h4,
     #technologies-section button {
         font-size: 10px;
+    }
+    
+    #technologies-section .tab-buttons {
+        display: none;
+    }
+
+    #technologies-section .tab-content {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+    }
+
+    #technologies-section p {
+        display: flex;
     }
 }
 
