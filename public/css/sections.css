@@ -196,7 +196,12 @@
 
 #about-me-section h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 60px;
+}
+
+#about-me-section p {
+    font-weight: 400;
+    font-size: 18px;
 }
 
 @media (max-width: 767.98px) {
@@ -234,10 +239,13 @@
     #about-me-section h1 {
         font-size: 2.5rem;
     }
+
+    #about-me-section p {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 992px) {
-
     #about-me-section .about-me-img,
     #about-me-section .about-me-text {
         min-height: 390px;
@@ -280,7 +288,7 @@
 
 #resume-section .location {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
