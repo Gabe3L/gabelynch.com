@@ -69,14 +69,17 @@
     width: 100%;
 }
 
-#home-section h1 {
-    margin-top: 1rem;
-    font-size: 2.2rem;
-    font-weight: 600;
+#home-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #home-section h1 {
     color: var(--light);
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
 }
 
 #home-section h1 span {
@@ -106,27 +109,16 @@
     text-align: center;
     padding: 1rem;
     margin-top: 30px;
+    width: 50%;
+    text-align: left;
 }
 
 #home-section .image-col {
     order: 2;
     width: 50%;
-    flex-grow: 1;
 }
 
 @media (max-width: 767.98px) {
-    #home-section .container {
-        display: flex;
-    }
-
-    #home-section h1,
-    #home-section h1 span,
-    #home-section h2,
-    #home-section h3,
-    #home-section h4 {
-        text-align: center;
-    }
-
     #home-section h1 {
         font-size: 3rem;
     }
@@ -146,26 +138,14 @@
     #home-section .profile-img {
         display: none;
     }
+
+    #home-section .text-col {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    #home-section .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #home-section .text-col {
-        width: 50%;
-        text-align: left;
-    }
-
-    #home-section .image-col {
-        width: 50%;
-        flex-grow: 1;
-    }
-
     #home-section h1 {
         font-size: 2.7rem;
     }
@@ -176,23 +156,6 @@
 }
 
 @media (min-width: 992px) {
-    #home-section .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    #home-section .text-col {
-        width: 50%;
-        text-align: left;
-    }
-
-    #home-section .image-col {
-        width: 50%;
-        flex-grow: 1;
-    }
-    
     #home-section h1 {
         font-size: clamp(2rem, 4vw, 4.5rem);
     }
@@ -274,6 +237,7 @@
 }
 
 @media (min-width: 992px) {
+
     #about-me-section .about-me-img,
     #about-me-section .about-me-text {
         min-height: 390px;
@@ -355,41 +319,25 @@
     }
 }
 
-#technologies-section .tech-box {
-    text-align: center;
-    margin: 40px;
-    background: var(--dark);
-    border-radius: var(--box-border-radius);
-    padding: 25px 15px;
-    box-shadow: 0 0 10px var(--dark);
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--primary);
-    animation: fade-in-up 0.5s ease forwards;
-    opacity: 0;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#technologies-section .tech-category {
-    display: none;
-}
-
-#technologies-section .tech-box:hover {
-    box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
-}
-
 #technologies-section .tech-logo {
     width: 70px;
     height: 70px;
     margin-bottom: 15px;
 }
 
-#technologies-section .tab-button {
+#technologies-section .tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 30px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+#technologies-section .tab-content {
+    display: none;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 30px;
+    padding-top: 20px;
     width: 100%;
 }
 
@@ -405,37 +353,39 @@
 
 #technologies-section button:hover {
     background-color: var(--light);
-    color: var(--white);
+    border: 2px solid var(--dark);
+    cursor: pointer;
 }
 
-#technologies-section .technology-container {
-    position: relative;
+#technologies-section .tech-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin: 0;
+    padding: 25px 15px;
+
+    background: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: var(--box-border-radius);
+
+    transition: all 0.3s ease-in-out;
+    animation: fade-in-up 0.5s ease forwards;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-    #technologies-section .technology-container {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-
-    #technologies-section .tech-box {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
+#technologies-section .tech-box:hover {
+    box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
 }
 
-@media (min-width: 992px) {
-    #technologies-section .technology-container {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
+@media (max-width: 767.98px) {
+    #technologies-section .tech-logo {
+        width: 50px;
     }
 
-    #technologies-section .tech-box {
-        flex: 0 0 25%;
-        max-width: 25%;
+    #technologies-section h4,
+    #technologies-section button {
+        font-size: 10px;
     }
 }
 
@@ -444,21 +394,20 @@
 }
 
 #projects-section .project {
-    position: relative;
-    width: 100%;
-    height: 285px;
-    border-radius: var(--box-border-radius);
-    max-width: 350px;
-    margin: 0 auto 30px;
+    display: flex;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+    width: 100%;
+    height: 285px;
+    max-width: 350px;
+    margin: 0 auto 30px;
+
+    background: var(--black);
+    border-radius: var(--box-border-radius);
+
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 #projects-section .overlay {
@@ -466,7 +415,6 @@
     inset: 0;
     opacity: 0;
     background: var(--primary);
-    z-index: 0;
     transition: all 0.3s ease;
     border-radius: var(--box-border-radius);
     display: flex;
@@ -512,7 +460,7 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     #projects-section .project-container {
-        flex: 0 0 33.33333%;
+        flex-basis: 33.33333%;
         max-width: 33.33333%;
     }
 
@@ -525,7 +473,7 @@
 
 @media (min-width: 992px) {
     #projects-section .project-container {
-        flex: 0 0 33.33333%;
+        flex-basis: 33.33333%;
         max-width: 33.33333%;
     }
 }
@@ -575,7 +523,6 @@
 #footer.footer {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     margin-top: 1.5rem;
     text-align: center;
     justify-content: center;

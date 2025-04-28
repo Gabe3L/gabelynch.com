@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Technology Buttons
 
     const tabButtons = document.querySelectorAll('.tab-button');
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const menu = document.querySelector('.navbar-menu');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function () {
@@ -25,22 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.style.display = 'none';
-                content.classList.remove('active');
             });
 
-            tabButtons.forEach(button => button.classList.remove('active'));
-
             if (targetContent) {
-                targetContent.style.display = 'flex';
-                targetContent.classList.add('active');
+                targetContent.style.display = 'grid';
             }
-
-            this.classList.add('active');
         });
     });
-
-    const toggleButton = document.querySelector('.navbar-toggle');
-    const menu = document.querySelector('.navbar-menu');
 
     toggleButton.addEventListener('click', function () {
         menu.classList.toggle('show');
