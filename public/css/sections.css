@@ -335,7 +335,6 @@
 
 #technologies-section .tab-content {
     display: none;
-    grid-template-columns: repeat(3, 3fr);
     gap: 30px;
     padding-top: 20px;
     width: 100%;
@@ -363,12 +362,14 @@
 
 #technologies-section .tech-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 
     width: 100%;
-    margin: 0;
+    margin: 10;
     padding: 25px 15px;
+    gap: 30%;
 
     background: var(--dark);
     border: 1px solid var(--primary);
@@ -398,11 +399,14 @@
 
     #technologies-section .tab-content {
         display: grid;
-        grid-template-columns: repeat(3, 3fr);
     }
 
     #technologies-section p {
         display: flex;
+    }
+
+    #technologies-section .tech-box {
+        gap: 15%;
     }
 }
 

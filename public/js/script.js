@@ -20,22 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.querySelector('.navbar-toggle');
     const menu = document.querySelector('.navbar-menu');
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const targetTabId = this.getAttribute('data-tab');
-            const targetContent = document.getElementById(targetTabId);
+    if (window.innerWidth > 768) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetTabId = this.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetTabId);
 
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.style.display = 'none';
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                if (targetContent) {
+                    targetContent.style.display = 'grid';
+                }
             });
-
-            if (targetContent) {
-                targetContent.style.display = 'grid';
-            }
         });
-    });
 
-    toggleButton.addEventListener('click', function () {
-        menu.classList.toggle('show');
-    });
+        toggleButton.addEventListener('click', function () {
+            menu.classList.toggle('show');
+        });
+    };
 });
