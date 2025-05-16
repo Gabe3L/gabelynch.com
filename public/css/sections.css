@@ -246,6 +246,7 @@
 }
 
 @media (min-width: 992px) {
+
     #about-me-section .about-me-img,
     #about-me-section .about-me-text {
         min-height: 390px;
@@ -330,42 +331,9 @@
 #technologies-section .tech-logo {
     width: 70px;
     height: 70px;
-    margin-bottom: 15px;
-}
 
-#technologies-section .tab-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 30px;
-    padding-top: 20px;
-    width: 100%;
-}
-
-#technologies-section .tab-content {
-    display: none;
-    gap: 30px;
-    padding-top: 20px;
-    width: 100%;
-}
-
-#technologies-section button {
-    width: 100%;
-    font-weight: 600;
-    border-radius: 25px;
-    background-color: transparent;
-    border: 2px solid var(--light);
-    color: var(--white);
-    transition: background 0.3s, color 0.3s;
-}
-
-#technologies-section button:hover {
-    background-color: var(--light);
-    border: 2px solid var(--dark);
-    cursor: pointer;
-}
-
-#technologies-section p {
-    display: none;
+    object-fit: contain;
+    object-position: center;
 }
 
 #technologies-section .tech-box {
@@ -374,14 +342,17 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
-    margin: 10;
-    padding: 25px 15px;
-    gap: 30%;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    padding: 20px;
 
     background: var(--dark);
-    border: 1px solid var(--primary);
-    border-radius: var(--box-border-radius);
+    border-radius: 20px;
+    box-shadow:
+        5px 5px 15px rgba(0, 0, 0, 0.7),
+        inset -3px -3px 7px rgba(255, 255, 255, 0.05),
+        inset 3px 3px 5px rgba(0, 0, 0, 0.9);
 
     transition: all 0.3s ease-in-out;
     animation: fade-in-up 0.5s ease forwards;
@@ -389,18 +360,24 @@
 
 #technologies-section .tech-box:hover {
     box-shadow: 0 0 25px var(--light), 0 0 50px var(--dark);
+    filter: brightness(1.1);
 }
 
 @media (max-width: 767.98px) {
     #technologies-section .tech-logo {
-        width: 50px;
+        width: 40px;
+    }
+
+    #technologies-section .tech-box {
+        width: 90px;
+        height: 90px;
     }
 
     #technologies-section h4,
     #technologies-section button {
         font-size: 10px;
     }
-    
+
     #technologies-section .tab-buttons {
         display: none;
     }
@@ -415,6 +392,14 @@
 
     #technologies-section .tech-box {
         gap: 15%;
+    }
+}
+
+@media (min-width: 772px) {
+    #technologies-section .row {
+        max-width: 1220px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
