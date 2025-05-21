@@ -1,6 +1,6 @@
 import styles from "./Contact.module.css";
-import global from "../styles/global.module.css"
-import animations from "../styles/animations.module.css";
+import global from "../../styles/global.module.css"
+import animations from "../../styles/animations.module.css";
 
 export const Contact = () => {
   return (

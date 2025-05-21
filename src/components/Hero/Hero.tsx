@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
-import global from "../styles/global.module.css"
-import animations from "../styles/animations.module.css";
+import global from "../../styles/global.module.css";
+import animations from "../../styles/animations.module.css";
+import headshot from "../../assets/profile/headshot.webp";
 
 export const Hero = () => {
   return (
@@ -8,7 +9,7 @@ export const Hero = () => {
       <div className={global.container}>
         <div className={`${styles.imageCol} ${animations.animateOnScroll}`}>
           <img
-            src="/assets/images/profile/headshot.webp"
+            src={headshot}
             alt="Portrait of Gabe Lynch"
             className={styles.profileImg}
           ></img>

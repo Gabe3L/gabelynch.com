@@ -1,4 +1,4 @@
-@import url('../styles/constants.module.css');
+@import url('../../styles/constants.module.css');
 
 .profileImg {
     background-size: cover;

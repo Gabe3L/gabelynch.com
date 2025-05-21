@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import global from "../styles/global.module.css"
+import global from "../../styles/global.module.css"
 // import animations from "../css/animation.module.css";
 
 export const Navbar = () => {

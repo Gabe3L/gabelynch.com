@@ -1,6 +1,7 @@
 import styles from "./About.module.css";
-import global from "../styles/global.module.css"
-import animations from "../styles/animations.module.css";
+import global from "../../styles/global.module.css";
+import animations from "../../styles/animations.module.css";
+import aboutMeImage from "../../assets/profile/about-me.webp";
 
 export const About = () => {
   return (
@@ -29,7 +30,7 @@ export const About = () => {
           <div
             className={`${styles.aboutMeImg} ${animations.animateOnScroll}`}
             style={{
-              backgroundImage: "url(/assets/images/profile/about-me.webp)",
+              backgroundImage: `url(${aboutMeImage})`,
             }}
           ></div>
         </div>

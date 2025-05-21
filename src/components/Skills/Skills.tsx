@@ -1,8 +1,20 @@
-import styles from "./Technologies.module.css";
-import global from "../styles/global.module.css"
-import animations from "../styles/animations.module.css";
+import styles from "./Skills.module.css";
+import global from "../../styles/global.module.css";
+import animations from "../../styles/animations.module.css";
 
-export const Technologies = () => {
+const skillIcons = import.meta.glob("../../assets/skills/*.svg", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+const getIconByName = (filename: string): string => {
+  const entry = Object.entries(skillIcons).find(([path]) =>
+    path.endsWith(`/${filename}.svg`)
+  );
+  return entry?.[1] ?? "";
+};
+
+export const Skills = () => {
   const techList = [
     { src: "python", alt: "Python" },
     { src: "java", alt: "Java" },
@@ -26,15 +38,15 @@ export const Technologies = () => {
         <header
           className={`${global.sectionHeader} ${animations.animateOnScroll}`}
         >
-          <h1>Technologies</h1>
-          <h2>Technologies</h2>
+          <h1>Skills</h1>
+          <h2>Skills</h2>
         </header>
 
         <div className={global.row}>
           {techList.map((tech) => (
             <div className={styles.techBox} key={tech.alt}>
               <img
-                src={`/assets/images/technologies/${tech.src}.svg`}
+                src={getIconByName(tech.src)}
                 alt={tech.alt}
                 className={styles.techLogo}
                 loading="lazy"
