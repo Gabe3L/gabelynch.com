@@ -9,6 +9,12 @@ export const About = () => {
       <div className={global.container}>
         <div className={global.row}>
           <div
+            className={`${styles.aboutMeImg} ${animations.animateOnScroll}`}
+            style={{
+              backgroundImage: `url(${aboutMeImage})`,
+            }}
+          ></div>
+          <div
             className={`${styles.aboutMeText} ${animations.animateOnScroll}`}
           >
             <h1>About Me</h1>
@@ -27,12 +33,6 @@ export const About = () => {
               <strong>English</strong> and <strong>French</strong>.
             </p>
           </div>
-          <div
-            className={`${styles.aboutMeImg} ${animations.animateOnScroll}`}
-            style={{
-              backgroundImage: `url(${aboutMeImage})`,
-            }}
-          ></div>
         </div>
       </div>
     </section>
