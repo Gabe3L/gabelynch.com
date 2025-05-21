@@ -1,8 +1,14 @@
+import styles from "./Projects.module.css";
+import global from "../styles/global.module.css"
+import animations from "../styles/animations.module.css";
+
 export const Projects = () => {
   return (
-    <section id="projects-section" className="section">
-      <div className="container">
-        <header className="section-header animate-on-scroll">
+    <section className={global.section}>
+      <div className={global.container}>
+        <header
+          className={`${global.sectionHeader} ${animations.animateOnScroll}`}
+        >
           <h1>Recent Projects</h1>
           <h2>Recent Projects</h2>
           <p>
@@ -10,48 +16,47 @@ export const Projects = () => {
             showcasing my knowledge in programming, robotics and design.
           </p>
         </header>
-        <div className="row">
-          <div className="project-container">
+        <div className={global.row}>
+          <div className={styles.projectContainer}>
             <a
               href="https://github.com/FRCTeam3756/2025-FRCRobot"
-              className="project"
+              className={styles.project}
               style={{
                 backgroundImage:
                   "url(/assets/images/projects/ramferno-2025.webp",
               }}
             >
-              <div className="overlay">
+              <div className={styles.overlay}>
                 <h3>RamFerno Robotics Codebase</h3>
                 <h4>2025</h4>
               </div>
             </a>
           </div>
 
-          <div className="project-container">
+          <div className={styles.projectContainer}>
             <a
               href="https://github.com/Gabe3L/gaia"
-              className="project"
+              className={styles.project}
               style={{
                 backgroundImage: "url(/assets/images/projects/gaia.webp",
               }}
             >
-              <div className="overlay">
+              <div className={styles.overlay}>
                 <h3>Project GAIA</h3>
                 <h4>In Progress</h4>
               </div>
             </a>
           </div>
 
-          <div className="project-container">
+          <div className={styles.projectContainer}>
             <a
               href="https://github.com/Gabe3L/ClickMaster"
-              className="project"
+              className={styles.project}
               style={{
-                backgroundImage:
-                  "url(/assets/images/projects/clickmaster.webp",
+                backgroundImage: "url(/assets/images/projects/clickmaster.webp",
               }}
             >
-              <div className="overlay">
+              <div className={styles.overlay}>
                 <h3>ClickMaster</h3>
                 <h4>2025</h4>
               </div>

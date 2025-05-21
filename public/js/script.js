@@ -1,7 +1,7 @@
 // Sitewide Animations
 
 document.addEventListener('DOMContentLoaded', function () {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const animatedElements = document.querySelectorAll('.animateOnScroll');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

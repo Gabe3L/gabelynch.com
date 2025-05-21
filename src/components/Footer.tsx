@@ -1,9 +1,12 @@
-export const Footer = () => {
-    const year = new Date().getFullYear();
+import styles from "./Footer.module.css";
+// import global from "../styles/global.module.css"
 
-    return (
-        <div id="footer" className="footer">
-            <p>Copyright &copy; {year} Gabe Lynch</p>
-        </div>
-    );
+export const Footer = () => {
+  const year = new Date().getFullYear();
+
+  return (
+    <div className={styles.footer}>
+      <p>Copyright &copy; {year} Gabe Lynch</p>
+    </div>
+  );
 };

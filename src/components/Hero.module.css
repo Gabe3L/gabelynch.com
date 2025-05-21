@@ -1,0 +1,99 @@
+@import url('../styles/constants.module.css');
+
+.profileImg {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textCol h1 {
+    color: var(--light);
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.textCol h1 span {
+    color: var(--white);
+}
+
+.textCol h2 {
+    color: var(--light);
+    font-size: 5vw;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem
+}
+
+.textCol h3 {
+    font-size: 1.5em;
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem
+}
+
+.textCol {
+    order: 1;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    text-align: left;
+}
+
+.imageCol {
+    order: 2;
+    width: 50%;
+}
+
+@media (max-width: 767.98px) {
+    .textCol h1 {
+        font-size: 3rem;
+    }
+
+    .textCol h2 {
+        font-size: 3.4rem;
+    }
+
+    .textCol h3 {
+        font-size: 2rem;
+    }
+
+    .profileImg {
+        display: none;
+    }
+
+    .textCol {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .textCol h1 {
+        font-size: 2.7rem;
+    }
+
+    .textCol h2 {
+        font-size: 3.4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .textCol h1 {
+        font-size: clamp(2rem, 4vw, 4.5rem);
+    }
+
+    .textCol h2 {
+        font-size: clamp(3.2rem, 5vw, 6.5rem);
+    }
+}

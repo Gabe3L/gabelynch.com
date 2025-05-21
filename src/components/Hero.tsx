@@ -1,15 +1,19 @@
+import styles from "./Hero.module.css";
+import global from "../styles/global.module.css"
+import animations from "../styles/animations.module.css";
+
 export const Hero = () => {
   return (
-    <section id="home-section" className="section">
-      <div className="container">
-        <div className="image-col animate-on-scroll">
+    <section className={global.section}>
+      <div className={global.container}>
+        <div className={`${styles.imageCol} ${animations.animateOnScroll}`}>
           <img
             src="/assets/images/profile/headshot.webp"
             alt="Portrait of Gabe Lynch"
-            className="profile-img"
+            className={styles.profileImg}
           ></img>
         </div>
-        <div className="text-col animate-on-scroll">
+        <div className={`${styles.textCol} ${animations.animateOnScroll}`}>
           <h1>
             Hello! <span>I'm</span>
           </h1>

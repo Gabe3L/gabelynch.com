@@ -1,7 +1,6 @@
-@import url("constants.css");
-
-.animate-on-scroll {
-  opacity: 0;
+/* Animation */
+.animateOnScroll {
+  opacity: 1; /* TODO: Change back to 0 */
   transform: translateY(40px);
   will-change: opacity, transform;
 }

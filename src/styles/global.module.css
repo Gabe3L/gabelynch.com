@@ -1,4 +1,4 @@
-@import url("constants.css");
+@import url('./constants.module.css');
 
 a {
   color: var(--white);
@@ -56,10 +56,10 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--black);
   line-height: 1.8;
-  color: var(--light-grey);
+  color: var(--grey);
 }
 
-.section-header {
+.sectionHeader {
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
@@ -72,12 +72,12 @@ body {
   position: relative;
 }
 
-.section-header h1,
-.section-header h2 {
+.sectionHeader h1,
+.sectionHeader h2 {
   margin: 0.5rem 0;
 }
 
-.section-header h1 {
+.sectionHeader h1 {
   position: absolute;
   top: 0px;
   color: var(--transparent-grey);
@@ -86,7 +86,7 @@ body {
   font-size: 4rem;
 }
 
-.section-header h2 {
+.sectionHeader h2 {
   color: var(--white);
   font-size: 3rem;
   font-weight: 700;
@@ -95,11 +95,11 @@ body {
 
 /* Phone (max-width: 767.98px) */
 @media (max-width: 767.98px) {
-  .section-header h1 {
+  .sectionHeader h1 {
     font-size: 3rem;
   }
 
-  .section-header h2 {
+  .sectionHeader h2 {
     font-size: 2.4rem;
   }
 }
@@ -147,4 +147,27 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+}
+
+/* Animation */
+.animateOnScroll {
+  opacity: 1; /* TODO: Change back to 0 */
+  transform: translateY(40px);
+  will-change: opacity, transform;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
 }

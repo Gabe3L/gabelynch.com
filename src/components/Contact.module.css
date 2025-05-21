@@ -1,0 +1,41 @@
+.section {
+    padding-bottom: 3em;
+}
+
+.contactLogo {
+    width: 70px;
+    height: 70px;
+    fill: var(--primary);
+}
+
+.icon {
+    width: 120px;
+    height: 120px;
+    background: var(--transparent-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background 0.1s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.icon:hover {
+    background: var(--light);
+    transform: scale(1.1);
+}
+
+@media (max-width: 767.98px) {
+    .icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .contactLogo {
+        width: 55px;
+        height: 55px;
+    }
+}
