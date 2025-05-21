@@ -2,13 +2,13 @@
     padding-bottom: 3em;
 }
 
-.contactLogo {
-    width: 70px;
-    height: 70px;
-    fill: var(--primary);
+.logoImage {
+    width: 70px !important;
+    height: 70px !important;
+    fill: var(--primary) !important;
 }
 
-.icon {
+.logoContainer {
     width: 120px;
     height: 120px;
     background: var(--transparent-grey);
@@ -23,19 +23,19 @@
     padding: 1rem;
 }
 
-.icon:hover {
+.logoContainer:hover {
     background: var(--light);
     transform: scale(1.1);
 }
 
 @media (max-width: 767.98px) {
-    .icon {
+    .logoContainer {
         width: 90px;
         height: 90px;
     }
 
-    .contactLogo {
-        width: 55px;
-        height: 55px;
+    .logoImage {
+        width: 55px !important;
+        height: 55px !important;
     }
 }

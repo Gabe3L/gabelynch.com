@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import styles from "./Contact.module.css";
-import global from "../../styles/global.module.css"
+import global from "../../styles/global.module.css";
 import animations from "../../styles/animations.module.css";
 
 export const Contact = () => {
@@ -18,23 +18,17 @@ export const Contact = () => {
         </header>
 
         <div className={global.row}>
-          <a
-            href="mailto:contact@gabelynch.com"
-            className={styles.icon}
-          >
-            <EmailIcon />
+          <a href="mailto:contact@gabelynch.com" className={styles.logoContainer}>
+            <EmailIcon className={styles.logoImage}  />
           </a>
           <a
             href="https://www.linkedin.com/in/gabe-lynch/"
-            className={styles.icon}
+            className={styles.logoContainer}
           >
-            <LinkedInIcon />
+            <LinkedInIcon className={styles.logoImage}  />
           </a>
-          <a
-            href="https://github.com/Gabe3L"
-            className={styles.icon}
-          >
-            <GitHubIcon />
+          <a href="https://github.com/Gabe3L" className={styles.logoContainer}>
+            <GitHubIcon className={styles.logoImage} />
           </a>
         </div>
       </div>
