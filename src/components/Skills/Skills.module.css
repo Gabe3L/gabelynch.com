@@ -44,14 +44,6 @@
     font-size: 10px;
   }
 
-  .tab-buttons {
-    display: none;
-  }
-
-  .tab-content {
-    display: grid;
-  }
-
   p {
     display: flex;
   }
