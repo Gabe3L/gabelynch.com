@@ -1,3 +1,151 @@
+.skills {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillsContent {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.skillsContentItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skillItem {
+  background-color: var(--background-color-2);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.skillItem:hover {
+  border: 1px solid var(--secondary-color);
+  filter: brightness(1.25);
+}
+
+.itemImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.itemTitle p {
+  font-size: var(--font-size-s);
+}
+
+.itemTitle span {
+  font-size: var(--font-size-xs);
+  color: var(--grey-color);
+  margin-top: -5px;
+}
+
+@media (max-width: 1085px) {
+  .skillItem {
+    max-width: 275px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skillsContent {
+    width: 95%;
+  }
+
+  .skillsContentItems {
+    gap: 15px;
+  }
+
+  .skillItem {
+    max-width: 250px;
+    height: 70px;
+    padding: 10px 15px;
+    gap: 15px;
+  }
+
+  .itemImage {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillItem {
+    max-width: 225px;
+    height: 65px;
+    padding: 7.5px 12.5px;
+    gap: 12px;
+  }
+
+  .itemImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .skillItem {
+    max-width: 210px;
+    height: 60px;
+    padding: 5px 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skillItem {
+    min-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: auto;
+    position: relative;
+    margin: 15px 5px;
+  }
+
+  .itemTitle {
+    position: absolute;
+    top: 65px;
+  }
+
+  .itemTitle span {
+    display: none;
+  }
+}
+
 .techLogo {
   width: 70px;
   height: 70px;

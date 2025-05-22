@@ -1,35 +1,81 @@
 import styles from "./Skills.module.css";
 import global from "../../styles/global.module.css";
 import animations from "../../styles/animations.module.css";
-
-const skillIcons = import.meta.glob("../../assets/skills/*.svg", {
-  eager: true,
-  import: "default",
-}) as Record<string, string>;
-
-const getIconByName = (filename: string): string => {
-  const entry = Object.entries(skillIcons).find(([path]) =>
-    path.endsWith(`/${filename}.svg`)
-  );
-  return entry?.[1] ?? "";
-};
+import { SkillCard } from "./SkillCard";
+import { motion } from "framer-motion";
 
 export const Skills = () => {
   const techList = [
-    { src: "python", alt: "Python" },
-    { src: "java", alt: "Java" },
-    { src: "cpp", alt: "C++" },
-    { src: "javascript", alt: "JavaScript" },
-    { src: "typescript", alt: "TypeScript" },
-    { src: "html", alt: "HTML" },
-    { src: "css", alt: "CSS" },
-    { src: "electronjs", alt: "ElectronJS" },
-    { src: "git", alt: "Git" },
-    { src: "pytorch", alt: "PyTorch" },
-    { src: "tensorflow", alt: "TensorFlow" },
-    { src: "react", alt: "ReactJS" },
-    { src: "django", alt: "Django" },
-    { src: "nginx", alt: "Nginx" },
+    { 
+      id: 1,
+      name: "python", 
+      type: "Programming Language"
+    },
+    { 
+      id: 2,
+      name: "java" ,
+      type: "Programming Language"
+    },
+    { 
+      id: 3,
+      name: "cpp",
+      type: "Programming Language"
+    },
+    { 
+      id: 4,
+      name: "javascript",
+      type: "Programming Language"
+    },
+    { 
+      id: 5,
+      name: "typescript",
+      type: "Programming Language"
+    },
+    { 
+      id: 6,
+      name: "html",
+      type: "Programming Language"
+    },
+    { 
+      id: 7,
+      name: "css",
+      type: "Programming Language"
+    },
+    { 
+      id: 8,
+      name: "electronjs",
+      type: "Programming Language" 
+    },
+    { 
+      id: 9,
+      name: "git",
+      type: "Programming Language" 
+    },
+    { 
+      id: 10,
+      name: "pytorch",
+      type: "Programming Language" 
+    },
+    { 
+      id: 11,
+      name: "tensorflow",
+      type: "Programming Language" 
+    },
+    { 
+      id: 12,
+      name: "react",
+      type: "Programming Language" 
+    },
+    { 
+      id: 13,
+      name: "django",
+      type: "Programming Language" 
+    },
+    { 
+      id: 14,
+      name: "nginx",
+      type: "Programming Language" 
+    },
   ];
 
   return (
@@ -42,18 +88,16 @@ export const Skills = () => {
           <h2>Skills</h2>
         </header>
 
-        <div className={global.row}>
-          {techList.map((tech) => (
-            <div className={styles.techBox} key={tech.alt}>
-              <img
-                src={getIconByName(tech.src)}
-                alt={tech.alt}
-                className={styles.techLogo}
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
+        <motion.div
+          className={styles.skillsContentItems}
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
+          {techList?.map((skill) => {
+            return <SkillCard item={skill} key={skill.id}/>;
+          })}
+        </motion.div>
       </div>
     </section>
   );
