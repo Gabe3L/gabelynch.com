@@ -8,73 +8,87 @@ export const Skills = () => {
   const techList = [
     { 
       id: 1,
-      name: "python", 
+      name: "Python", 
+      file: "python.svg",
       type: "Programming Language"
     },
     { 
       id: 2,
-      name: "java" ,
+      name: "Java",
+      file: "java.svg",
       type: "Programming Language"
     },
     { 
       id: 3,
-      name: "cpp",
+      name: "C++",
+      file: "cpp.svg",
       type: "Programming Language"
     },
     { 
       id: 4,
-      name: "javascript",
+      name: "JavaScript",
+      file: "javascript.svg",
       type: "Programming Language"
     },
     { 
       id: 5,
-      name: "typescript",
+      name: "TypeScript",
+      file: "typescript.svg",
       type: "Programming Language"
     },
     { 
       id: 6,
-      name: "html",
-      type: "Programming Language"
+      name: "HTML",
+      file: "html.svg",
+      type: "Markup Language"
     },
     { 
       id: 7,
-      name: "css",
-      type: "Programming Language"
+      name: "CSS",
+      file: "css.svg",
+      type: "Style Sheet Language"
     },
     { 
       id: 8,
-      name: "electronjs",
-      type: "Programming Language" 
+      name: "ReactJS",
+      file: "reactjs.svg",
+      type: "JavaScript Framework" 
     },
     { 
       id: 9,
-      name: "git",
-      type: "Programming Language" 
+      name: "ElectronJS",
+      file: "electronjs.svg",
+      type: "JavaScript Framework" 
     },
     { 
       id: 10,
-      name: "pytorch",
-      type: "Programming Language" 
+      name: "Git",
+      file: "git.svg",
+      type: "Version Control Tool" 
     },
     { 
       id: 11,
-      name: "tensorflow",
-      type: "Programming Language" 
+      name: "PyTorch",
+      file: "pytorch.svg",
+      type: "Machine Learning Library" 
     },
     { 
       id: 12,
-      name: "react",
-      type: "Programming Language" 
+      name: "TensorFlow",
+      file: "tensorflow.svg",
+      type: "Machine Learning Library" 
     },
     { 
       id: 13,
-      name: "django",
-      type: "Programming Language" 
+      name: "Django",
+      file: "django.svg",
+      type: "Backend Framework" 
     },
     { 
       id: 14,
-      name: "nginx",
-      type: "Programming Language" 
+      name: "Nginx",
+      file: "nginx.svg",
+      type: "Web Server" 
     },
   ];
 
