@@ -8,14 +8,14 @@
 }
 
 .resumeBox {
+    position: relative;
     flex: 1 1 calc(50% - 30px);
     background: var(--transparent-grey);
     padding: 30px;
     border-radius: var(--box-border-radius);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+    min-height: 250px;
 }
 
 .date {
@@ -40,7 +40,7 @@
     text-transform: uppercase;
 }
 
-p {
+.description {
     margin-top: 1.5rem
 }
 
@@ -64,6 +64,8 @@ p {
 .button p {
     color: var(--black);
     margin: 0.2em;
+    font-weight: 600;
+    font-size: 18px
 }
 
 
