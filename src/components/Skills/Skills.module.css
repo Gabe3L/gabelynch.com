@@ -6,8 +6,8 @@
 }
 
 .skillItem {
-  background-color: #1a1a1a;
-  border: 1px solid #454545;
+  background-color: var(--transparent-grey);
+  border: 1px solid var(--grey);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -20,7 +20,8 @@
 }
 
 .skillItem:hover {
-  filter: brightness(1.25);
+  box-shadow: 0 0 18px var(--primary);
+  filter: brightness(1.1);
 }
 
 .itemImage {
@@ -40,12 +41,12 @@
 }
 
 .itemTitle p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
 .itemTitle span {
-  font-size: 10px;
+  font-size: 12px;
   color: #b3b3b3;
 }
 
@@ -87,6 +88,14 @@
   .itemImage {
     width: 40px;
     height: 40px;
+  }
+
+  .itemTitle p {
+    font-size: 14px;
+  }
+
+  .itemTitle span {
+    font-size: 10px;
   }
 }
 
