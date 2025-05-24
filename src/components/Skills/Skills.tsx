@@ -93,7 +93,7 @@ export const Skills = () => {
   ];
 
   return (
-    <section className={global.section}>
+    <section className={global.section} id="skills">
       <div className={global.container}>
         <header
           className={`${global.sectionHeader} ${animations.animateOnScroll}`}

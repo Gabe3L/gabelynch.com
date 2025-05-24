@@ -37,7 +37,7 @@ const projectList = [
 
 export const Projects = () => {
   return (
-    <section className={global.section}>
+    <section className={global.section} id="projects">
       <div className={global.container}>
         <header
           className={`${global.sectionHeader} ${animations.animateOnScroll}`}

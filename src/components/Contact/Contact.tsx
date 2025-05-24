@@ -8,7 +8,7 @@ import animations from "../../styles/animations.module.css";
 
 export const Contact = () => {
   return (
-    <section className={global.section}>
+    <section className={global.section} id="contact">
       <div className={global.container}>
         <header
           className={`${global.sectionHeader} ${animations.animateOnScroll}`}

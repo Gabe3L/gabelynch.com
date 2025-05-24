@@ -5,7 +5,7 @@ import aboutMeImage from "../../assets/profile/about-me.webp";
 
 export const About = () => {
   return (
-    <section className={global.section}>
+    <section className={global.section} id="about-me">
       <div className={global.container}>
         <div className={global.row}>
           <div
