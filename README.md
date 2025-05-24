@@ -7,21 +7,44 @@ This site showcases my work, skills, and projects across web design, machine lea
 ## Features
 
 - Clean, responsive design
-- Built with HTML, CSS, and JavaScript
+- Built with TypeScript, CSS, and ReactJS
 - Hosted using **Cloudflare Pages**
 
 ### Site Sections
-  - About Me
+  - Hero
+  - About
   - Resume
-  - Tech Stack
+  - Skills
   - Projects
   - Contact Info
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (vanilla)
+- **Frontend:** TypeScript, React, CSS
 - **Hosting:** [Cloudflare Pages](https://pages.cloudflare.com/)
 - **Domain:** [www.gabelynch.com](https://www.gabelynch.com)
+
+## Run Locally
+
+To run this project on your computer, follow these steps:
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/Gabe3L/gabelynch.com.git
+cd gabelynch.com
+```
+
+### 2. Install dependencies:
+Make sure you have Node.js installed.
+
+```bash
+npm install
+```
+
+### 3. View the Website:
+```bash
+npm run dev
+```
 
 ## License
 
