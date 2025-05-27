@@ -1,88 +1,137 @@
-.projectContainer {
-    width: 100%;
+a:hover {
+    color: white;
 }
 
-.project {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-
+.projects {
     width: 100%;
-    height: 285px;
-    max-width: 350px;
-    margin: 0 auto 30px;
-
-    background: var(--black);
-    border-radius: var(--box-border-radius);
-
-    background-size: cover;
-    background-position: center;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    background: var(--primary);
-    transition: all 0.3s ease;
-    border-radius: var(--box-border-radius);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    margin: auto;
+.projectsContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
     text-align: center;
 }
 
-h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: var(--white);
+.projectItem {
+    background-color: var(--transparent-grey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding: 25px;
+    width: 100%;
+    position: relative;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-h4 {
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 600;
+.projectItem:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
 }
 
-.project:hover .overlay,
-.project:focus .overlay {
-    opacity: .75;
+.projectImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: black;
+    aspect-ratio: 1/1;
+    overflow: hidden;
 }
 
-.project:hover .text,
-.project:focus .text {
-    opacity: 1;
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-@media (max-width: 767.98px) {
-    .project {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto 30px;
+.projectDetails {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.projectTitle {
+    text-align: center;
+    width: 100%;
+}
+
+.projectTitle h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.projectTitle p {
+    font-size: 1rem;
+    color: var(--grey);
+    max-width: 90%;
+}
+
+.projectStacks {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 5px;
+    margin-top: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stacks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.techStack {
+    font-size: var(--font-size-xs);
+    padding: 8px 10px;
+    min-width: 100px;
+    color: var(--grey);
+    background-color: var(--transparent-grey);
+    border: 1px solid var(--accent);
+    filter: brightness(1.2);
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+.techStack:hover {
+    background-color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+    .techStack {
+        padding: 5px 7px;
+        min-width: 75px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .projectContainer {
-        flex-basis: 33.33333%;
-        max-width: 33.33333%;
-    }
-
-    .project {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto 30px;
+@media (max-width: 768px) {
+    .projectStacks {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 10px;
     }
 }
 
-@media (min-width: 992px) {
-    .projectContainer {
-        flex-basis: 33.33333%;
-        max-width: 33.33333%;
+@media (max-width: 480px) {
+    .techStack {
+        padding: 5px 7px;
+        min-width: 75px;
     }
 }

@@ -1,46 +1,41 @@
+import globalStyles from "../../styles/global.module.css";
 import styles from "./Projects.module.css";
-import global from "../../styles/global.module.css";
 import animations from "../../styles/animations.module.css";
-
-const projectIcons = import.meta.glob("../../assets/projects/*.webp", {
-  eager: true,
-  import: "default",
-}) as Record<string, string>;
-
-const getIconByName = (filename: string): string => {
-  const entry = Object.entries(projectIcons).find(([path]) =>
-    path.endsWith(`/${filename}.webp`)
-  );
-  return entry?.[1] ?? "";
-};
+import { ProjectCard } from "./ProjectCard";
 
 const projectList = [
   {
+    id: 0,
     title: "RamFerno Robotics Codebase",
     subtitle: "2025",
-    href: "https://github.com/FRCTeam3756/2025-FRCRobot",
-    image: "ramferno-2025",
+    techStack: ["Java", "WPILib"],
+    github: "https://github.com/FRCTeam3756/2025-FRCRobot",
+    image: "ramferno-2025.webp",
   },
   {
+    id: 1,
     title: "Project GAIA",
     subtitle: "In Progress",
-    href: "https://github.com/Gabe3L/gaia",
-    image: "gaia",
+    techStack: ["Python", "PyTorch", "TypeScript"],
+    github: "https://github.com/Gabe3L/gaia",
+    image: "gaia.webp",
   },
   {
+    id: 2,
     title: "ClickMaster",
     subtitle: "2025",
-    href: "https://github.com/Gabe3L/ClickMaster",
-    image: "clickmaster",
+    techStack: ["Java", "JavaFX", "AWT"],
+    github: "https://github.com/Gabe3L/ClickMaster",
+    image: "clickmaster.webp",
   },
 ];
 
 export const Projects = () => {
   return (
-    <section className={global.section} id="projects">
-      <div className={global.container}>
+    <section className={globalStyles.section} id="projects">
+      <div className={globalStyles.container}>
         <header
-          className={`${global.sectionHeader} ${animations.animateOnScroll}`}
+          className={`${globalStyles.sectionHeader} ${animations.animateOnScroll}`}
         >
           <h1>Recent Projects</h1>
           <h2>Recent Projects</h2>
@@ -50,23 +45,10 @@ export const Projects = () => {
           </p>
         </header>
 
-        <div className={global.row}>
-          {projectList.map((project) => (
-            <div className={styles.projectContainer} key={project.title}>
-              <a
-                href={project.href}
-                className={styles.project}
-                style={{
-                  backgroundImage: `url(${getIconByName(project.image)})`,
-                }}
-              >
-                <div className={styles.overlay}>
-                  <h3>{project.title}</h3>
-                  <h4>{project.subtitle}</h4>
-                </div>
-              </a>
-            </div>
-          ))}
+        <div className={styles.projectsContent}>
+          {projectList.map((item) => {
+            return <ProjectCard key={item.id} item={item} />;
+          })}
         </div>
       </div>
     </section>
