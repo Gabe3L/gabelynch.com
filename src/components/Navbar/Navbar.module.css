@@ -1,62 +1,72 @@
-.navbarToggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--white);
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.navbarLink {
-    padding-left: 20px;
-    padding-right: 20px;
-    color: var(--white);
-    text-decoration: none;
-}
-
-.navbarLogo {
-    color: var(--white);
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
-    font-weight: 900;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: var(--white);
-    padding-top: .7rem;
-    padding-bottom: .7rem;
-}
-
-.navbarMenu {
-    background-color: var(--black);
+.navbar {
+    width: 100%;
     display: flex;
-    margin-top: 15px;
-    margin-bottom: 0;
-    list-style: none;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     align-items: center;
+    top: 0;
+    pointer-events: none;
 }
 
-@media (max-width: 991.98px) {
-    .navbarMenu {
+.navbarItems {
+    pointer-events: auto;
+
+    color: white;
+    background-color: black;
+    border: 1px solid var(--primary);
+
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    margin: 0 auto;
+    gap: 2rem;
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbarItem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbarItem a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbarItem a:hover p,
+.navbarItem a:hover .icon {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.navbarItem p {
+    font-size: var(--font-size-m);
+    transition: color 0.3s ease;
+}
+
+.icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 767.78px) {
+    .navbarItem p {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 10;
+        transition: all 1s linear;
     }
+}
 
-    .navbarMenu.show {
-        display: flex;
-    }
-
-    .navbarToggle {
-        display: block;
+@media (min-width: 768px) {
+    .navbarItem .icon {
+        display: none;
     }
 }

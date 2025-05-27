@@ -19,18 +19,22 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
           >
-            <h1>
-              Hello! <span>I'm</span>
-            </h1>
+            Hello! <span>I'm</span>
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <h2>Gabe Lynch</h2>
+            Gabe Lynch
           </motion.h2>
-          <h3>A software developer and student from London, ON, Canada.</h3>
+          <motion.h3
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, ease: "easeOut" }}
+          >
+            A software developer and student from London, ON, Canada.
+          </motion.h3>
         </div>
       </div>
       <div className={styles.links}>
@@ -39,7 +43,7 @@ export const Hero = () => {
           href="mailto:contact@gabelynch.com"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
         >
           <EmailIcon className="gmail-icon social-icon" />
         </motion.a>
@@ -48,7 +52,7 @@ export const Hero = () => {
           href="https://github.com/Gabe3L"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
         >
           <GitHubIcon className="github-icon social-icon" />
         </motion.a>
@@ -57,7 +61,7 @@ export const Hero = () => {
           href="https://www.linkedin.com/in/gabe-lynch/"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
         >
           <LinkedInIcon className="linkedin-icon social-icon" />
         </motion.a>

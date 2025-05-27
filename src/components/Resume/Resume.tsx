@@ -35,7 +35,7 @@ const resumeItems = [
 
 export const Resume = () => {
   return (
-    <section className={global.section}>
+    <section className={global.section} id="resume">
       <div className={global.container}>
         <header
           className={`${global.sectionHeader} ${animations.animateOnScroll}`}
