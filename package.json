@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build"
+    "build": "tsc -b && vite build",
+    "prebuild": "rm -rf node_modules package-lock.json && npm install"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
