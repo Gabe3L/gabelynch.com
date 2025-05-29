@@ -60,7 +60,7 @@ export const Resume = () => {
 
         <div className={global.row}>
           <div className={`${styles.button} ${animations.animateOnScroll}`}>
-            <a href="/resume.pdf" download>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
               <p>Download CV</p>
             </a>
           </div>

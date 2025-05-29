@@ -41,6 +41,8 @@ export const Hero = () => {
         <motion.a
           className="gmail"
           href="mailto:contact@gabelynch.com"
+          target="_blank" 
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
@@ -50,6 +52,8 @@ export const Hero = () => {
         <motion.a
           className="github"
           href="https://github.com/Gabe3L"
+          target="_blank" 
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
@@ -59,6 +63,8 @@ export const Hero = () => {
         <motion.a
           className="linkedin"
           href="https://www.linkedin.com/in/gabe-lynch/"
+          target="_blank" 
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}

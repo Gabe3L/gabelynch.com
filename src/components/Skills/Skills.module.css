@@ -21,7 +21,7 @@
 }
 
 .skillItem:hover {
-  box-shadow: 0 0 18px var(--primary);
+  box-shadow: 0 0 18px var(--accent);
   filter: brightness(1.1);
 }
 

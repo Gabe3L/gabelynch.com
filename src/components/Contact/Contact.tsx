@@ -18,16 +18,28 @@ export const Contact = () => {
         </header>
 
         <div className={global.row}>
-          <a href="mailto:contact@gabelynch.com" className={styles.logoContainer}>
-            <EmailIcon className={styles.logoImage}  />
+          <a
+            href="mailto:contact@gabelynch.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.logoContainer}
+          >
+            <EmailIcon className={styles.logoImage} />
           </a>
           <a
             href="https://www.linkedin.com/in/gabe-lynch/"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.logoContainer}
           >
-            <LinkedInIcon className={styles.logoImage}  />
+            <LinkedInIcon className={styles.logoImage} />
           </a>
-          <a href="https://github.com/Gabe3L" className={styles.logoContainer}>
+          <a
+            href="https://github.com/Gabe3L"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.logoContainer}
+          >
             <GitHubIcon className={styles.logoImage} />
           </a>
         </div>

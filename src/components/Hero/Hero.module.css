@@ -3,8 +3,8 @@
 .heroBackground {
   filter: hue-rotate(0deg);
   background-image: 
-    linear-gradient(to right, rgba(98, 0, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(89, 0, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(to right, rgba(90, 0, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 0, 255, 0.18) 1px, transparent 1px);
   background-size: 24px 24px;
   background-repeat: repeat;
   background-position: 0% 0%, 0% 0%;
@@ -100,9 +100,8 @@
 .links::after {
   content: "";
   flex-basis: 300px;
-  height: 3px;
-  height: 1px;
-  background-color: var(--primary);
+  height: 2px;
+  background-color: var(--light);
   opacity: 0.2;
   margin: 0 20px;
 }

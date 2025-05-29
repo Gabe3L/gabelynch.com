@@ -28,7 +28,7 @@ export const ProjectCard = ({ item }: Project) => {
   const imageUrl = getIconByName(item.image);
 
   return (
-    <a href={item.github}>
+    <a href={item.github} target="_blank" rel="noopener noreferrer">
       <motion.div
         className={styles.projectItem}
         initial={{ opacity: 0, y: 75 }}
