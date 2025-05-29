@@ -4,32 +4,32 @@ import animations from "../../styles/animations.module.css";
 
 const resumeItems = [
   {
-    date: "Class of 2026",
+    date: "2026 (Expected)",
     position: "High School Diploma",
     location: "Sir Wilfrid Laurier S.S.",
     description:
-      "Pursuing a diploma with an focus on STEM, music, and athletics. Recognized for accomplishments through the High Honours, Unsung Hero and Computer Science Awards for academic excellence and leadership.",
+      "Pursuing a diploma with an focus on STEM, music, and athletics. Recognized through the High Honours, Unsung Hero and Computer Science Awards for academic excellence and leadership.",
   },
   {
     date: "2024",
     position: "Producer's Assistant",
     location: "Bone Vault Inc.",
     description:
-      "Developed stylized websites including bonevaultinc.com. Installed Starlink satellite internet for seamless remote production and migrated team communications to a branded email system.",
+      "Developed stylized websites including bonevaultinc.com. Installed Starlink satellite internet for remote production and migrated team communications to a branded email system.",
   },
   {
     date: "2023 - Present",
     position: "Lead Programmer",
     location: "FRC Team 3756",
     description:
-      "Directed software development for competition robots. Led team to victory at the North Bay District FRC Event and earned the uWindsor Engineering Inspiration Award. Secured over $60,000 in sponsorships through outreach and presentations.",
+      "Directed software development for competition robots. Led team to victory at the North Bay District FRC Event and earned the University of Windsor Engineering Inspiration Award. Secured over $60,000 in sponsorships via outreach initiatives and presentations.",
   },
   {
     date: "2024 - Present",
     position: "Program Director",
     location: "CampFerno",
     description:
-      "Designed, launched, and led a STEM camp for elementary students. Taught hands-on lessons in robotics, programming, and engineering. Managed finances, coordinated volunteers, and oversaw all logistics.",
+      "Designed, launched, and directed a STEM camp for elementary students. Taught hands-on lessons in robot design, programming, and engineering. Managed finances, coordinated volunteer efforts, and oversaw all logistical aspects.",
   },
 ];
 
