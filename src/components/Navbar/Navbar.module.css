@@ -70,3 +70,14 @@
         display: none;
     }
 }
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .navbarItem p {
+        display: none;
+        transition: all 1s linear;
+    }
+
+    .navbarItem .icon {
+        display: block;
+    }
+}

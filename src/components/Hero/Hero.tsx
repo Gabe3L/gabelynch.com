@@ -41,33 +41,48 @@ export const Hero = () => {
         <motion.a
           className="gmail"
           href="mailto:contact@gabelynch.com"
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.1, delay: 0.05 },
+          }}
+          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
         >
           <EmailIcon className="gmail-icon social-icon" />
         </motion.a>
         <motion.a
           className="github"
           href="https://github.com/Gabe3L"
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.1, delay: 0.05 },
+          }}
+          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
         >
           <GitHubIcon className="github-icon social-icon" />
         </motion.a>
         <motion.a
           className="linkedin"
           href="https://www.linkedin.com/in/gabe-lynch/"
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.1, delay: 0.05 },
+          }}
+          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
         >
           <LinkedInIcon className="linkedin-icon social-icon" />
         </motion.a>

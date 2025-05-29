@@ -156,3 +156,37 @@
         font-size: clamp(1.4rem, 2vw, 2.3rem);
     }
 }
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .mainText {
+    padding: 0 1rem;
+  }
+
+  .mainText h1 {
+    font-size: 1.6rem;
+  }
+
+  .mainText h2 {
+    font-size: 2.4rem;
+  }
+
+  .mainText h3 {
+    font-size: 1rem;
+  }
+
+  .links {
+    position: relative;
+    bottom: auto;
+    margin-top: 2rem;
+  }
+
+  .links::before,
+  .links::after {
+    flex-basis: 100px;
+  }
+}
