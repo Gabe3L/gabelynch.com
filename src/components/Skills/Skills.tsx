@@ -62,33 +62,21 @@ export const Skills = () => {
     },
     { 
       id: 10,
-      name: "Git",
-      file: "git.svg",
-      type: "Version Control Tool" 
-    },
-    { 
-      id: 11,
       name: "PyTorch",
       file: "pytorch.svg",
       type: "Machine Learning Library" 
     },
     { 
-      id: 12,
+      id: 11,
       name: "TensorFlow",
       file: "tensorflow.svg",
       type: "Machine Learning Library" 
     },
     { 
-      id: 13,
+      id: 12,
       name: "Django",
       file: "django.svg",
       type: "Backend Framework" 
-    },
-    { 
-      id: 14,
-      name: "Nginx",
-      file: "nginx.svg",
-      type: "Web Server" 
     },
   ];
 
