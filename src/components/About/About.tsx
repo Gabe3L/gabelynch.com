@@ -22,17 +22,17 @@ export const About = () => {
               <h1>About Me</h1>
               <p>
                 Hi, my name is Gabe Lynch! I'm a passionate and driven student{" "}
-                with a deep interest in technology, music, and sports. I{" "}
+                with a deep interest in technology, music, and sports. I{"  "}
                 specialize in <strong>Machine Learning</strong>,{" "}
-                <strong>Robotics</strong> and <strong>Web Design</strong>, and{" "}
+                <strong>Robotics</strong> and <strong>Web Design</strong>, and{"  "}
                 I'm constantly expanding my knowledge. My programming skills{" "}
                 include <strong>Python</strong>, <strong>Java</strong> and{" "}
-                <strong>Web Development</strong> and I'm currently learning{" "}
+                <strong>React</strong> and I'm currently learning{" "}
                 technologies like <strong>C++</strong>,{" "}
                 <strong>React Native</strong> and <strong>ROS 2</strong>.{" "}
                 Outside of tech, I am a <strong>dedicated musician</strong>,{" "}
-                competitive <strong>volleyball player</strong> and I am fluent{" "}
-                in both <strong>English</strong> and <strong>French</strong>.{" "}
+                competitive <strong>volleyball player</strong> and {" "}
+                <strong>bilingual</strong> student.
               </p>
             </div>
           </motion.div>

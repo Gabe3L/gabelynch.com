@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "./Projects.module.css";
+import styles from "./ProjectCard.module.css";
 
 const projectIcons = import.meta.glob("../../assets/projects/*.webp", {
   eager: true,
@@ -21,6 +21,9 @@ interface Project {
     techStack: string[];
     github: string;
     image: string;
+    featureOne: string;
+    featureTwo: string;
+    featureThree: string;
   };
 }
 
@@ -37,25 +40,31 @@ export const ProjectCard = ({ item }: Project) => {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        <div className={styles.projectImage}>
-          <img src={imageUrl} alt={item.title} />
-        </div>
         <div className={styles.projectDetails}>
-          <div className={styles.projectTitle}>
+          <div className={styles.projectImage}>
+            <img src={imageUrl} alt={item.title} />
+          </div>
+          <div className={styles.projectText}>
             <h3>{item.title}</h3>
             <p>{item.subtitle}</p>
           </div>
-          <div className={styles.projectStacks}>
-            <div className={styles.stacks}>
-              {item.techStack.map((tech) => {
-                return (
-                  <p key={tech} className={styles.techStack}>
-                    {tech}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+        </div>
+        <div className={styles.features}>
+          <h4>Key Features:</h4>
+          <ul>
+            <li>{item.featureOne}</li>
+            <li>{item.featureTwo}</li>
+            <li>{item.featureThree}</li>
+          </ul>
+        </div>
+        <div className={styles.techStackContainer}>
+          {item.techStack.map((tech) => {
+            return (
+              <p key={tech} className={styles.techItem}>
+                {tech}
+              </p>
+            );
+          })}
         </div>
       </motion.div>
     </a>

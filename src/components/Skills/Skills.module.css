@@ -102,18 +102,17 @@
 
 @media (max-width: 560px) {
   .skillItem {
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: calc((100% / 3) - 20px);
+    width: calc((100% / 2) - 20px);
     height: 75px;
     margin: 10px 5px;
     padding: 5px 10px;
   }
 
-  .itemTitle {
+  /* .itemTitle {
     display: none;
-  }
+  } */
 
   .skillsContentItems {
     padding-left: 20px;
