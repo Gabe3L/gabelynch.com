@@ -103,7 +103,7 @@ export const Skills = () => {
         </header>
 
         <motion.div
-          className={styles.skillsContentItems}
+          className={styles.skillsContainer}
           initial={{ opacity: 0, y: 75 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}

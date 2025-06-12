@@ -29,7 +29,7 @@ const resumeItems = [
     position: "Program Director",
     location: "CampFerno",
     description:
-      "Designed, launched, and directed a STEM camp for elementary students. Taught hands-on lessons in robot design, programming, and engineering. Managed finances, coordinated volunteer efforts, and oversaw all logistical aspects.",
+      "Designed, launched, and directed a STEM camp for elementary students. Taught hands-on lessons in robot design, programming, and engineering. Managed finances, coordinated volunteer efforts, and oversaw all logistics.",
   },
 ];
 

@@ -1,4 +1,4 @@
-import styles from "./Skills.module.css";
+import styles from "./SkillCard.module.css";
 
 const skillIcons = import.meta.glob("../../assets/skills/*.svg", {
   eager: true,
