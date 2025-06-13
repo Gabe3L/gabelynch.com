@@ -19,11 +19,6 @@
     box-sizing: border-box;
     margin: 15px;
     width: 100%;
-    transition: box-shadow 0.3s ease;
-}
-
-.aboutMeContainer:hover {
-    box-shadow: 0 0 15px 3px var(--primary);
 }
 
 .aboutMeImage,

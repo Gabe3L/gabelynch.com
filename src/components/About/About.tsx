@@ -10,8 +10,7 @@ export const About = () => {
         <div className="row">
           <motion.div
             className={styles.aboutMeContainer}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ scale: 1.005 }}
+            transition={{ duration: 0.5 }}
           >
             <div className={styles.aboutMeImage}>
               <img src={aboutMeImage} alt="Gabe Lynch" />

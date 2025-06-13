@@ -111,4 +111,12 @@
     margin: 10px 5px;
     padding: 5px 10px;
   }
+
+  .itemTitle h1 {
+    font-size: 14px;
+  }
+
+  .itemTitle p {
+    font-size: 12px;
+  }
 }
