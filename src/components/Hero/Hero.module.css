@@ -1,14 +1,12 @@
-@import url('../../styles/constants.module.css');
-
 .heroBackground {
   filter: hue-rotate(0deg);
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(90, 0, 255, 0.18) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(90, 0, 255, 0.18) 1px, transparent 1px);
   background-size: 24px 24px;
   background-repeat: repeat;
   background-position: 0% 0%, 0% 0%;
-  
+
   mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 0%, transparent 100%);
   mask-composite: intersect;
 
@@ -27,54 +25,54 @@
 }
 
 .profileImg {
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .mainText {
-    position: relative;
-    z-index: 1;
-    justify-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  z-index: 1;
+  justify-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mainText h1 {
-    color: var(--light);
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 600;
+  color: var(--light);
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
 }
 
 .mainText h1 span {
-    color: var(--white);
+  color: white;
 }
 
 .mainText h2 {
-    font-weight: 700;
-    margin: 0;
+  font-weight: 700;
+  margin: 0;
 
-    background: linear-gradient(180deg, #fff, var(--primary) 80%);
+  background: linear-gradient(180deg, #fff, var(--primary) 80%);
 
-    background-clip: text;
-    color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .mainText h3 {
-    font-size: 1.5em;
-    color: var(--white);
-    font-weight: 400;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem
+  font-size: 1.5em;
+  color: white;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem
 }
 
 .links {
@@ -107,54 +105,54 @@
 }
 
 @media (max-width: 767.98px) {
-    .mainText h1 {
-        font-size: clamp(2.4rem, 7vw, 3.5rem);
-    }
+  .mainText h1 {
+    font-size: clamp(2.4rem, 7vw, 3.5rem);
+  }
 
-    .mainText h2 {
-        font-size: clamp(3.6rem, 13vw, 10.4rem);
-    }
+  .mainText h2 {
+    font-size: clamp(3.6rem, 13vw, 10.4rem);
+  }
 
-    .mainText h3 {
-        font-size: clamp(0.6rem, 3vw, 1.3rem);
-    }
+  .mainText h3 {
+    font-size: clamp(0.6rem, 3vw, 1.3rem);
+  }
 
-    .profileImg {
-        display: none;
-    }
+  .profileImg {
+    display: none;
+  }
 
-    .mainText {
-        width: 100%;
-        text-align: center;
-    }
+  .mainText {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .mainText h1 {
-        font-size: 3.3rem;
-    }
+  .mainText h1 {
+    font-size: 3.3rem;
+  }
 
-    .mainText h2 {
-        font-size: 6rem;
-    }
+  .mainText h2 {
+    font-size: 6rem;
+  }
 
-    .mainText h3 {
-        font-size: 1.2rem;
-    }
+  .mainText h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 992px) {
-    .mainText h1 {
-        font-size: clamp(3.5rem, 5vw, 10rem);
-    }
+  .mainText h1 {
+    font-size: clamp(3.5rem, 5vw, 10rem);
+  }
 
-    .mainText h2 {
-        font-size: clamp(7.4rem, 10vw, 50rem);
-    }
+  .mainText h2 {
+    font-size: clamp(7.4rem, 10vw, 50rem);
+  }
 
-    .mainText h3 {
-        font-size: clamp(1.4rem, 2vw, 2.3rem);
-    }
+  .mainText h3 {
+    font-size: clamp(1.4rem, 2vw, 2.3rem);
+  }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {

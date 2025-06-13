@@ -33,23 +33,23 @@ export const ProjectCard = ({ item }: Project) => {
   return (
     <a href={item.github} target="_blank" rel="noopener noreferrer">
       <motion.div
-        className={styles.projectItem}
+        className={styles.cardContainer}
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        <div className={styles.projectDetails}>
-          <div className={styles.projectImage}>
+        <div className={styles.cardHeader}>
+          <div className={styles.cardImageContainer}>
             <img src={imageUrl} alt={item.title} />
           </div>
-          <div className={styles.projectText}>
+          <div className={styles.textContent}>
             <h3>{item.title}</h3>
             <p>{item.subtitle}</p>
           </div>
         </div>
-        <div className={styles.features}>
+        <div className={styles.cardFeatures}>
           <h4>Key Features:</h4>
           <ul>
             <li>{item.featureOne}</li>
@@ -57,7 +57,7 @@ export const ProjectCard = ({ item }: Project) => {
             <li>{item.featureThree}</li>
           </ul>
         </div>
-        <div className={styles.techStackContainer}>
+        <div className={styles.cardTechStack}>
           {item.techStack.map((tech) => {
             return (
               <p key={tech} className={styles.techItem}>

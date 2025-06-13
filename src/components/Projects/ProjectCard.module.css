@@ -1,25 +1,24 @@
-.projectItem {
+.cardContainer {
     background-color: var(--transparent-grey);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 10px;
     padding: 25px;
     width: 100%;
     position: relative;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.projectItem:hover {
+.cardContainer:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent);
+    border-color: var(--primary);
 }
 
-.projectImage {
+.cardImageContainer {
     width: 20%;
     display: flex;
     justify-content: center;
@@ -29,92 +28,89 @@
     overflow: hidden;
 }
 
-.projectImage img {
+.cardImageContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.projectDetails {
+.cardHeader {
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 2px;
+    padding: 2px 0;
 }
 
-.projectText {
-    text-align: left;
+.textContent {
     width: 75%;
-    padding-top: auto;
+    text-align: left;
     margin-bottom: auto;
 }
 
-.projectText h3 {
+.textContent h3 {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
 }
 
-.features {
+.textContent p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+.cardFeatures {
     color: white;
     text-align: left;
 }
 
-.features h4 {
+.cardFeatures h4 {
     font-weight: 600;
 }
 
-.techStackContainer {
-    display: flex;
-    width: 100%;
-    justify-content: left;
-    padding: 10px 0;
-    gap: 5px;
-    margin-top: 0px;
-    flex-direction: column;
-    align-items: flex-start;
+.cardTechStack {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 10px;
+    width: 100%;
+    align-items: flex-start;
 }
 
 .techItem{
-    font-size: var(--font-size-xs);
+    font-size: 16px;
     padding: 8px 10px;
     min-width: 100px;
     color: var(--grey);
     background-color: var(--transparent-grey);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--light);
     filter: brightness(1.2);
     border-radius: 8px;
-    transition: all 0.5s;
+    transition: background-color 0.5s ease;
+    cursor: default;
 }
 
 .techItem:hover {
-    background-color: var(--accent);
+    background-color: var(--light);
 }
 
 @media (max-width: 1024px) {
-    .techStackContainer {
+    .cardTechStack {
         padding: 5px 7px;
         min-width: 75px;
     }
 }
 
 @media (max-width: 768px) {
-    .techStackContainer {
+    .cardTechStack {
         flex-direction: row;
         align-items: flex-end;
-        margin-top: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .techStackContainer {
+    .cardTechStack {
         padding: 5px 7px;
         min-width: 75px;
     }

@@ -1,91 +1,101 @@
 import styles from "./Skills.module.css";
-import global from "../../styles/global.module.css";
-import animations from "../../styles/animations.module.css";
 import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
+import {
+  SiPython,
+  // SiJava,
+  SiCplusplus,
+  SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiElectron,
+  SiPytorch,
+  SiTensorflow,
+  SiDjango,
+} from "react-icons/si";
 
 export const Skills = () => {
   const techList = [
-    { 
+    {
       id: 1,
-      name: "Python", 
-      file: "python.svg",
-      type: "Programming Language"
+      name: "Python",
+      Icon: SiPython,
+      type: "Language",
     },
-    { 
-      id: 2,
-      name: "Java",
-      file: "java.svg",
-      type: "Programming Language"
-    },
-    { 
+    // {
+    //   id: 2,
+    //   name: "Java",
+    //   Icon: SiJava,
+    //   type: "Language"
+    // },
+    {
       id: 3,
       name: "C++",
-      file: "cpp.svg",
-      type: "Programming Language"
+      Icon: SiCplusplus,
+      type: "Language",
     },
-    { 
+    {
       id: 4,
       name: "JavaScript",
-      file: "javascript.svg",
-      type: "Programming Language"
+      Icon: SiJavascript,
+      type: "Language",
     },
-    { 
+    {
       id: 5,
       name: "TypeScript",
-      file: "typescript.svg",
-      type: "Programming Language"
+      Icon: SiTypescript,
+      type: "Language",
     },
-    { 
+    {
       id: 6,
       name: "HTML",
-      file: "html.svg",
-      type: "Markup Language"
+      Icon: SiHtml5,
+      type: "Language",
     },
-    { 
+    {
       id: 7,
       name: "CSS",
-      file: "css.svg",
-      type: "Style Sheet Language"
+      Icon: SiCss3,
+      type: "Language",
     },
-    { 
+    {
       id: 8,
       name: "ReactJS",
-      file: "reactjs.svg",
-      type: "JavaScript Framework" 
+      Icon: SiReact,
+      type: "Framework",
     },
-    { 
+    {
       id: 9,
       name: "ElectronJS",
-      file: "electronjs.svg",
-      type: "JavaScript Framework" 
+      Icon: SiElectron,
+      type: "Framework",
     },
-    { 
+    {
       id: 10,
       name: "PyTorch",
-      file: "pytorch.svg",
-      type: "Machine Learning Library" 
+      Icon: SiPytorch,
+      type: "Library",
     },
-    { 
+    {
       id: 11,
       name: "TensorFlow",
-      file: "tensorflow.svg",
-      type: "Machine Learning Library" 
+      Icon: SiTensorflow,
+      type: "Library",
     },
-    { 
+    {
       id: 12,
       name: "Django",
-      file: "django.svg",
-      type: "Backend Framework" 
+      Icon: SiDjango,
+      type: "Framework",
     },
   ];
 
   return (
-    <section className={global.section} id="skills">
-      <div className={global.container}>
-        <header
-          className={`${global.sectionHeader} ${animations.animateOnScroll}`}
-        >
+    <section className="section" id="skills">
+      <div className="container">
+        <header className="sectionHeader">
           <h1>Skills</h1>
           <h2>Skills</h2>
         </header>
@@ -97,7 +107,7 @@ export const Skills = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
         >
           {techList?.map((skill) => {
-            return <SkillCard item={skill} key={skill.id}/>;
+            return <SkillCard item={skill} key={skill.id} />;
           })}
         </motion.div>
       </div>

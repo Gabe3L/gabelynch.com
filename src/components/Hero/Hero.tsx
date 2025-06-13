@@ -1,6 +1,4 @@
 import styles from "./Hero.module.css";
-import global from "../../styles/global.module.css";
-import animations from "../../styles/animations.module.css";
 
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -12,8 +10,8 @@ export const Hero = () => {
   return (
     <section className={styles.hero} id="home">
       <div className={styles.heroBackground} />
-      <div className={global.container}>
-        <div className={`${styles.mainText} ${animations.animateOnScroll}`}>
+      <div className="container">
+        <div className={styles.mainText}>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -50,7 +48,7 @@ export const Hero = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0.05 },
           }}
-          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
         >
           <EmailIcon className="gmail-icon social-icon" />
         </motion.a>
@@ -66,7 +64,7 @@ export const Hero = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0.05 },
           }}
-          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
         >
           <GitHubIcon className="github-icon social-icon" />
         </motion.a>
@@ -82,7 +80,7 @@ export const Hero = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0.05 },
           }}
-          whileTap={{ scale: 0.90, transition: { duration: 0.1, delay: 0 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
         >
           <LinkedInIcon className="linkedin-icon social-icon" />
         </motion.a>

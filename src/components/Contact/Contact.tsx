@@ -3,21 +3,17 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import styles from "./Contact.module.css";
-import global from "../../styles/global.module.css";
-import animations from "../../styles/animations.module.css";
 
 export const Contact = () => {
   return (
-    <section className={global.section} id="contact">
-      <div className={global.container}>
-        <header
-          className={`${global.sectionHeader} ${animations.animateOnScroll}`}
-        >
+    <section className="section" id="contact">
+      <div className="container">
+        <header className="sectionHeader">
           <h1>Contact</h1>
           <h2>Contact</h2>
         </header>
 
-        <div className={global.row}>
+        <div className="row">
           <a
             href="mailto:contact@gabelynch.com"
             target="_blank"

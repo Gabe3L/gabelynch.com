@@ -1,6 +1,4 @@
 import styles from "./Resume.module.css";
-import global from "../../styles/global.module.css";
-import animations from "../../styles/animations.module.css";
 
 const resumeItems = [
   {
@@ -35,21 +33,16 @@ const resumeItems = [
 
 export const Resume = () => {
   return (
-    <section className={global.section} id="resume">
-      <div className={global.container}>
-        <header
-          className={`${global.sectionHeader} ${animations.animateOnScroll}`}
-        >
+    <section className="section" id="resume">
+      <div className="container">
+        <header className="sectionHeader">
           <h1>Resume</h1>
           <h2>Resume</h2>
         </header>
 
         <div className={styles.resumeGrid}>
           {resumeItems.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.resumeBox} ${animations.animateOnScroll}`}
-            >
+            <div key={index} className={styles.resumeBox}>
               <span className={styles.date}>{item.date}</span>
               <span className={styles.position}>{item.position}</span>
               <span className={styles.location}>{item.location}</span>
@@ -58,9 +51,14 @@ export const Resume = () => {
           ))}
         </div>
 
-        <div className={global.row}>
-          <div className={`${styles.button} ${animations.animateOnScroll}`}>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
+        <div className="row">
+          <div className={styles.button}>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
               <p>Download CV</p>
             </a>
           </div>

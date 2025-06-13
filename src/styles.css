@@ -1,12 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('./constants.module.css');
+
+:root {
+  --primary: #893eb5;
+  --light: #a855f7;
+  --very-light: #c99df3;
+  --dark: #1f1534;
+  --grey: #b4b4b4;
+  --transparent-grey: #ffffff1a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 a {
-  color: var(--white);
+  color: white;
   text-decoration: none;
   transition: .3s all ease;
 }
@@ -59,7 +73,7 @@ nav {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--black);
+  background: black;
   line-height: 1.8;
   color: var(--grey);
 }
@@ -92,7 +106,7 @@ body {
 }
 
 .sectionHeader h2 {
-  color: var(--white);
+  color: white;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -143,7 +157,7 @@ body {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 75vw;
+    max-width: 65vw;
   }
 }
 
@@ -152,27 +166,4 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-}
-
-/* Animation */
-.animateOnScroll {
-  opacity: 1; /* TODO: Change back to 0 */
-  transform: translateY(40px);
-  will-change: opacity, transform;
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.fade-in-up {
-  animation: fade-in-up 0.5s ease-out forwards;
 }
