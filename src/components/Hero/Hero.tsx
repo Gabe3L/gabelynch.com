@@ -7,30 +7,24 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
+  const fadeUp = {
+    initial: { y: 20, opacity: 1 },
+    animate: { y: 0 },
+    transition: { duration: 0.6, ease: "easeOut" },
+  };
+
   return (
     <section className={styles.hero} id="home">
       <div className={styles.heroBackground} />
       <div className="container">
         <div className={styles.mainText}>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <motion.h1 {...fadeUp}>
             Hello! <span>I'm</span>
           </motion.h1>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <motion.h2 {...fadeUp}>
             Gabe Lynch
           </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <motion.h3 {...fadeUp}>
             A software developer and student from London, ON, Canada.
           </motion.h3>
         </div>
