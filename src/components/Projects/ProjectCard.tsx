@@ -45,7 +45,7 @@ export const ProjectCard = ({ item }: Project) => {
             <img src={imageUrl} alt={item.title} />
           </div>
           <div className={styles.textContent}>
-            <h3>{item.title}</h3>
+            <h1>{item.title}</h1>
             <p>{item.subtitle}</p>
           </div>
         </div>

@@ -3,7 +3,6 @@ import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
 import {
   SiPython,
-  // SiJava,
   SiCplusplus,
   SiJavascript,
   SiTypescript,
@@ -16,6 +15,8 @@ import {
   SiDjango,
 } from "react-icons/si";
 
+import { FaJava } from "react-icons/fa"
+
 export const Skills = () => {
   const techList = [
     {
@@ -24,12 +25,12 @@ export const Skills = () => {
       Icon: SiPython,
       type: "Language",
     },
-    // {
-    //   id: 2,
-    //   name: "Java",
-    //   Icon: SiJava,
-    //   type: "Language"
-    // },
+    {
+      id: 2,
+      name: "Java",
+      Icon: FaJava,
+      type: "Language"
+    },
     {
       id: 3,
       name: "C++",
