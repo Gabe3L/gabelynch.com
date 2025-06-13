@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   const fadeUp = {
-    initial: { y: 20, opacity: 1 },
+    initial: { y: 20 },
     animate: { y: 0 },
     transition: { duration: 0.6, ease: "easeOut" },
   };

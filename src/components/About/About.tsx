@@ -10,7 +10,10 @@ export const About = () => {
         <div className="row">
           <motion.div
             className={styles.aboutMeContainer}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className={styles.aboutMeImage}>
               <img src={aboutMeImage} alt="Gabe Lynch" />

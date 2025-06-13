@@ -1,4 +1,5 @@
 import styles from "./Resume.module.css";
+import { motion } from "framer-motion";
 
 const resumeItems = [
   {
@@ -42,12 +43,19 @@ export const Resume = () => {
 
         <div className={styles.resumeGrid}>
           {resumeItems.map((item, index) => (
-            <div key={index} className={styles.resumeBox}>
+            <motion.div
+              key={index}
+              className={styles.resumeBox}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <span className={styles.date}>{item.date}</span>
               <span className={styles.position}>{item.position}</span>
               <span className={styles.location}>{item.location}</span>
               <span className={styles.description}>{item.description}</span>
-            </div>
+            </motion.div>
           ))}
         </div>
 

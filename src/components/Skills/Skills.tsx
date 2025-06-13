@@ -101,16 +101,19 @@ export const Skills = () => {
           <h2>Skills</h2>
         </header>
 
-        <motion.div
-          className={styles.skillsContainer}
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-        >
-          {techList?.map((skill) => {
-            return <SkillCard item={skill} key={skill.id} />;
-          })}
-        </motion.div>
+        <div className={styles.skillsContainer}>
+          {techList.map((skill, index) => (
+            <motion.div
+              key={skill.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.4 }}
+            >
+              <SkillCard item={skill} />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
