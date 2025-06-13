@@ -13,23 +13,23 @@ export const Hero = () => {
       <div className="container">
         <div className={styles.mainText}>
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Hello! <span>I'm</span>
           </motion.h1>
           <motion.h2
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Gabe Lynch
           </motion.h2>
           <motion.h3
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             A software developer and student from London, ON, Canada.
           </motion.h3>
@@ -41,14 +41,8 @@ export const Hero = () => {
           href="mailto:contact@gabelynch.com"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 150 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.1, delay: 0.05 },
-          }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
+          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
         >
           <EmailIcon className="gmail-icon social-icon" />
         </motion.a>
@@ -57,14 +51,8 @@ export const Hero = () => {
           href="https://github.com/Gabe3L"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 150 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.1, delay: 0.05 },
-          }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
+          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
         >
           <GitHubIcon className="github-icon social-icon" />
         </motion.a>
@@ -73,14 +61,8 @@ export const Hero = () => {
           href="https://www.linkedin.com/in/gabe-lynch/"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 150 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.1, delay: 0.05 },
-          }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1, delay: 0 } }}
+          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
         >
           <LinkedInIcon className="linkedin-icon social-icon" />
         </motion.a>
