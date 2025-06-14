@@ -106,7 +106,7 @@
   .skillItem {
     align-items: center;
     justify-content: center;
-    width: calc((100% / 2) - 20px);
+    width: 100%;
     height: 75px;
     margin: 10px 5px;
     padding: 5px 10px;
