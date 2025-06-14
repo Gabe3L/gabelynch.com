@@ -1,12 +1,18 @@
 import styles from "./Projects.module.css";
 import { ProjectCard } from "./ProjectCard";
 
+import { FaJava } from "react-icons/fa";
+import { SiReact, SiTypescript, SiFastapi, SiGradle } from "react-icons/si";
+
 const projectList = [
   {
     id: 0,
     title: "2025 FRC Robot",
     subtitle: "January 2025 - March 2025",
-    techStack: ["Java", "WPILib"],
+    techStack: [
+      { name: "Java", image: FaJava },
+      { name: "GradleRIO",  image: SiGradle },
+    ],
     github: "https://github.com/FRCTeam3756/2025-FRCRobot",
     image: "ramferno.webp",
     featureOne: "Smooth and responsive control",
@@ -17,7 +23,11 @@ const projectList = [
     id: 1,
     title: "SpotiFrame",
     subtitle: "May 2025 - Ongoing",
-    techStack: ["React", "TypeScript", "FastAPI"],
+    techStack: [
+      { name: "React", image: SiReact },
+      { name: "TypeScript", image: SiTypescript },
+      { name: "FastAPI", image: SiFastapi },
+    ],
     github: "https://github.com/Gabe3L/SpotiFrame",
     image: "spotiframe.webp",
     featureOne: "Modern UI",

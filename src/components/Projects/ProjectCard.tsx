@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./ProjectCard.module.css";
+import type { IconType } from "react-icons";
 
 const projectIcons = import.meta.glob("../../assets/projects/*.webp", {
   eager: true,
@@ -14,11 +15,16 @@ const getIconByName = (filename: string): string => {
   );
 };
 
+interface TechItem {
+  name: string;
+  image: IconType;
+}
+
 interface Project {
   item: {
     title: string;
     subtitle: string;
-    techStack: string[];
+    techStack: TechItem[];
     github: string;
     image: string;
     featureOne: string;
@@ -37,8 +43,6 @@ export const ProjectCard = ({ item }: Project) => {
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
       >
         <div className={styles.cardHeader}>
           <div className={styles.cardImageContainer}>
@@ -60,8 +64,9 @@ export const ProjectCard = ({ item }: Project) => {
         <div className={styles.cardTechStack}>
           {item.techStack.map((tech) => {
             return (
-              <p key={tech} className={styles.techItem}>
-                {tech}
+              <p key={tech.name} className={styles.techItem}>
+                <tech.image className={styles.techIcon}/>
+                {tech.name}
               </p>
             );
           })}
