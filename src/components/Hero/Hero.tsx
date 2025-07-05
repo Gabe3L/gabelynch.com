@@ -15,7 +15,6 @@ export const Hero = () => {
 
   return (
     <section className={styles.hero} id="home">
-      <div className={styles.heroBackground} />
       <div className="container">
         <div className={styles.mainText}>
           <motion.h1 {...fadeUp}>

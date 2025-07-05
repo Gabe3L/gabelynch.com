@@ -1,21 +1,3 @@
-.heroBackground {
-  filter: hue-rotate(0deg);
-  background-image:
-    linear-gradient(to right, rgba(90, 0, 255, 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(90, 0, 255, 0.18) 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-repeat: repeat;
-  background-position: 0% 0%, 0% 0%;
-
-  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 0%, transparent 100%);
-  mask-composite: intersect;
-
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .hero {
   height: 100vh;
   position: relative;
