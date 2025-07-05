@@ -1,4 +1,4 @@
-.cardContainer {
+.projectCard {
     background-color: var(--transparent-grey);
     border-radius: 10px;
     display: flex;
@@ -13,12 +13,12 @@
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.cardContainer:hover {
+.projectCard:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     border-color: var(--primary);
 }
 
-.cardImageContainer {
+.projectImage {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -29,13 +29,13 @@
     margin-top: 15px;
 }
 
-.cardImageContainer img {
+.projectImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cardHeader {
+.projectHeader {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -43,33 +43,33 @@
     gap: 20px;
 }
 
-.horizontalBar {
+.projectDivider {
     height: 2px;
     background-color: grey;
     width: 100%;
     margin-top: 8px;
 }
 
-.textContent {
+.projectTitle {
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.textContent h1 {
+.projectTitle h1 {
     font-size: 1.75rem;
     font-weight: 600;
     margin: 0;
 }
 
-.textContent p {
+.projectTitle p {
     font-size: 1rem;
     font-weight: 300;
     margin: 0;
     color: white;
 }
 
-.cardFeatures {
+.projectBody {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -79,7 +79,7 @@
     flex-wrap: nowrap;
 }
 
-.textFeatures p {
+.projectFeatures p {
     font-weight: 300;
     font-size: 14px;
     margin: 0px;
@@ -87,7 +87,7 @@
     width: 100%;
 }
 
-.techFeatures {
+.projectTech {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -95,7 +95,7 @@
     margin-left: auto;
 }
 
-.cardTechStack {
+.techList {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -103,65 +103,67 @@
     justify-content: flex-end;
 }
 
-.techItem {
-    font-size: 16px;
-    min-width: 100px;
-    color: white;
-    border-radius: 8px;
-    transition: background-color 0.5s ease;
-}
-
 .techIcon {
     margin-right: 8px;
     vertical-align: middle;
 }
 
-@media (min-width: 1023.98px) {
-    .cardFeatures {
+@media (min-width: 1024px) {
+    .projectBody {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .techFeatures {
+    .projectTech {
         margin-top: 15px;
         margin-left: 0;
     }
 }
 
-@media (max-width: 1023.98px) {
-    .cardTechStack {
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .techList {
         min-width: 75px;
     }
 
-    .textContent h1 {
+    .projectTitle h1 {
         font-size: 1.6rem;
     }
 
-    .textContent p {
+    .projectTitle p {
         font-size: 0.9rem;
     }
 }
 
-@media (max-width: 768px) {
-    .cardTechStack {
+@media (min-width: 480px) and (max-width: 767.98px) {
+    .techList {
         flex-direction: row;
-        align-items: flex-end;
     }
 
-    .cardFeatures {
+    .projectBody {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .techFeatures {
+    .projectTech {
         margin-top: 15px;
         margin-left: 0;
     }
 }
 
-@media (max-width: 480px) {
-    .cardTechStack {
+@media (max-width: 479.98px) {
+    .techList {
         padding: 5px 7px;
         min-width: 75px;
+        flex-direction: row;
+    }
+
+    .projectBody {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projectTech {
+        margin-top: 15px;
+        margin-left: 0;
     }
 }

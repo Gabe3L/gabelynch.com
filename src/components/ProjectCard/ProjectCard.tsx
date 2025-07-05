@@ -40,31 +40,31 @@ export const ProjectCard = ({ item }: Project) => {
   return (
     <a href={item.github} target="_blank" rel="noopener noreferrer">
       <motion.div
-        className={styles.cardContainer}
+        className={styles.projectCard}
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <div className={styles.cardHeader}>
-          <div className={styles.textContent}>
+        <div className={styles.projectHeader}>
+          <div className={styles.projectTitle}>
             <h1>{item.title}</h1>
             <p>{item.subtitle}</p>
           </div>
         </div>
-        <div className={styles.horizontalBar}></div>
-        <div className={styles.cardFeatures}>
-          <div className={styles.textFeatures}>
+        <div className={styles.projectDivider}></div>
+        <div className={styles.projectBody}>
+          <div className={styles.projectFeatures}>
             <p>| {item.featureOne}</p>
             <p>| {item.featureTwo}</p>
             <p>| {item.featureThree}</p>
           </div>
-          <div className={styles.techFeatures}>
-            <div className={styles.cardTechStack}>
+          <div className={styles.projectTech}>
+            <div className={styles.techList}>
               {item.techStack.map((tech) => {
                 return (
                   <TechItem
                     key={tech.name}
-                    image={<tech.image className={styles.techIcon} />}
+                    image={tech.image}
                     text={tech.name}
                   />
                 );
@@ -72,7 +72,7 @@ export const ProjectCard = ({ item }: Project) => {
             </div>
           </div>
         </div>
-        <div className={styles.cardImageContainer}>
+        <div className={styles.projectImage}>
           <img src={imageUrl} alt={item.title} />
         </div>
       </motion.div>

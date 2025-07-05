@@ -1,15 +1,17 @@
-import React from 'react';
+import type { IconType } from 'react-icons';
 import styles from './TechItem.module.css';
 
 interface TechItemProps {
-  image: React.ReactNode;
+  image: IconType;
   text: string;
 }
 
-export const TechItem = ({ image, text }: TechItemProps) => {
+export const TechItem = ({ image: Icon, text }: TechItemProps) => {
   return (
     <div className={styles.pill}>
-      <span className={styles.icon}>{image}</span>
+      <span className={styles.icon}>
+        <Icon />
+      </span>
       <span className={styles.text}>{text}</span>
     </div>
   );
