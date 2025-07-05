@@ -66,7 +66,7 @@ export const ProjectCard = ({ item }: Project) => {
             return (
               <p key={tech.name} className={styles.techItem}>
                 <tech.image className={styles.techIcon}/>
-                {tech.name}
+                <p className={styles.techText}>{tech.name}</p>
               </p>
             );
           })}

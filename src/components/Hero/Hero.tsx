@@ -10,7 +10,7 @@ export const Hero = () => {
   const fadeUp = {
     initial: { y: 20 },
     animate: { y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
   return (
