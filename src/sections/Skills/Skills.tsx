@@ -1,5 +1,5 @@
 import styles from "./Skills.module.css";
-import { SkillCard } from "./SkillCard";
+import { SkillCard } from "../../components/SkillCard/SkillCard";
 import { motion } from "framer-motion";
 import {
   SiPython,

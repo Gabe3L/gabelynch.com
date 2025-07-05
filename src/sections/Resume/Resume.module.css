@@ -50,9 +50,9 @@
     cursor: pointer;
     border-radius: 40px;
     font-size: 15px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 600;
     text-align: center;
     margin-top: 30px;
 }
@@ -72,5 +72,9 @@
 @media (max-width: 768px) {
     .resumeGrid {
         grid-template-columns: 1fr;
+    }
+
+    .button p {
+        font-size: 15px;
     }
 }

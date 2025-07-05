@@ -1,5 +1,5 @@
 import styles from "./Projects.module.css";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
 import { FaJava } from "react-icons/fa";
 import { SiReact, SiTypescript, SiFastapi, SiGradle } from "react-icons/si";

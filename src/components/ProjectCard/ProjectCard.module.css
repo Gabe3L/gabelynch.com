@@ -65,10 +65,13 @@
 .cardFeatures {
     color: white;
     text-align: left;
+    margin-top: 10px;
 }
 
-.cardFeatures h4 {
-    font-weight: 600;
+.cardFeatures p {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0px;
 }
 
 .cardTechStack {

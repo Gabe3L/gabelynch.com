@@ -54,12 +54,9 @@ export const ProjectCard = ({ item }: Project) => {
           </div>
         </div>
         <div className={styles.cardFeatures}>
-          <h4>Key Features:</h4>
-          <ul>
-            <li>{item.featureOne}</li>
-            <li>{item.featureTwo}</li>
-            <li>{item.featureThree}</li>
-          </ul>
+          <p>| {item.featureOne}</p>
+          <p>| {item.featureTwo}</p>
+          <p>| {item.featureThree}</p>
         </div>
         <div className={styles.cardTechStack}>
           {item.techStack.map((tech) => {
