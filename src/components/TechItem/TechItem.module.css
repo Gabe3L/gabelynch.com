@@ -1,0 +1,21 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid grey;
+  background-color: transparent;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  gap: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.text {
+  font-size: 14px;
+  color: white;
+}

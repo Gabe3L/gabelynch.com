@@ -19,13 +19,14 @@
 }
 
 .cardImageContainer {
-    width: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 13px;
     background-color: black;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2.75/1;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 .cardImageContainer img {
@@ -42,8 +43,14 @@
     gap: 20px;
 }
 
+.horizontalBar {
+    height: 2px;
+    background-color: grey;
+    width: 100%;
+    margin-top: 8px;
+}
+
 .textContent {
-    width: 75%;
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
@@ -63,15 +70,29 @@
 }
 
 .cardFeatures {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     color: white;
-    text-align: left;
+    width: 100%;
     margin-top: 10px;
+    flex-wrap: nowrap;
 }
 
-.cardFeatures p {
+.textFeatures p {
     font-weight: 300;
     font-size: 14px;
     margin: 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.techFeatures {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: right;
+    margin-left: auto;
 }
 
 .cardTechStack {
@@ -79,7 +100,7 @@
     flex-wrap: wrap;
     gap: 8px;
     width: 100%;
-    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .techItem {
@@ -95,13 +116,21 @@
     vertical-align: middle;
 }
 
-@media (max-width: 1024px) {
-    .cardTechStack {
-        min-width: 75px;
+@media (min-width: 1023.98px) {
+    .cardFeatures {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .cardImageContainer {
-        width: 60px;
+    .techFeatures {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .cardTechStack {
+        min-width: 75px;
     }
 
     .textContent h1 {
@@ -117,6 +146,16 @@
     .cardTechStack {
         flex-direction: row;
         align-items: flex-end;
+    }
+
+    .cardFeatures {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .techFeatures {
+        margin-top: 15px;
+        margin-left: 0;
     }
 }
 

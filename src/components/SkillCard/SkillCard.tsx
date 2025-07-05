@@ -10,7 +10,7 @@ interface SkillCardProps {
   };
 }
 
-export const SkillCard  = ({ item }: SkillCardProps) => {
+export const SkillCard = ({ item }: SkillCardProps) => {
   return (
     <div className={styles.skillItem}>
       <div className={styles.itemImage}>

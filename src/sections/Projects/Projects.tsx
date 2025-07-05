@@ -2,7 +2,7 @@ import styles from "./Projects.module.css";
 import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
 import { FaJava } from "react-icons/fa";
-import { SiReact, SiTypescript, SiFastapi, SiGradle } from "react-icons/si";
+import { SiReact, SiFastapi, SiGradle } from "react-icons/si";
 
 const projectList = [
   {
@@ -16,7 +16,7 @@ const projectList = [
     github: "https://github.com/FRCTeam3756/2025-FRCRobot",
     image: "ramferno.webp",
     featureOne: "Smooth and responsive control",
-    featureTwo: "Customizable autonomous routines",
+    featureTwo: "Custom autonomous routines",
     featureThree: "Hot-Swappable keybinds",
   },
   {
@@ -25,7 +25,6 @@ const projectList = [
     subtitle: "May 2025 - Ongoing",
     techStack: [
       { name: "React", image: SiReact },
-      { name: "TypeScript", image: SiTypescript },
       { name: "FastAPI", image: SiFastapi },
     ],
     github: "https://github.com/Gabe3L/SpotiFrame",

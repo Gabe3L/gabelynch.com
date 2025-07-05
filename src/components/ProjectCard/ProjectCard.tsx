@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./ProjectCard.module.css";
 import type { IconType } from "react-icons";
+import { TechItem } from "../TechItem/TechItem";
 
 const projectIcons = import.meta.glob("../../assets/projects/*.webp", {
   eager: true,
@@ -45,28 +46,34 @@ export const ProjectCard = ({ item }: Project) => {
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <div className={styles.cardHeader}>
-          <div className={styles.cardImageContainer}>
-            <img src={imageUrl} alt={item.title} />
-          </div>
           <div className={styles.textContent}>
             <h1>{item.title}</h1>
             <p>{item.subtitle}</p>
           </div>
         </div>
+        <div className={styles.horizontalBar}></div>
         <div className={styles.cardFeatures}>
-          <p>| {item.featureOne}</p>
-          <p>| {item.featureTwo}</p>
-          <p>| {item.featureThree}</p>
+          <div className={styles.textFeatures}>
+            <p>| {item.featureOne}</p>
+            <p>| {item.featureTwo}</p>
+            <p>| {item.featureThree}</p>
+          </div>
+          <div className={styles.techFeatures}>
+            <div className={styles.cardTechStack}>
+              {item.techStack.map((tech) => {
+                return (
+                  <TechItem
+                    key={tech.name}
+                    image={<tech.image className={styles.techIcon} />}
+                    text={tech.name}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
-        <div className={styles.cardTechStack}>
-          {item.techStack.map((tech) => {
-            return (
-              <p key={tech.name} className={styles.techItem}>
-                <tech.image className={styles.techIcon}/>
-                <p className={styles.techText}>{tech.name}</p>
-              </p>
-            );
-          })}
+        <div className={styles.cardImageContainer}>
+          <img src={imageUrl} alt={item.title} />
         </div>
       </motion.div>
     </a>
