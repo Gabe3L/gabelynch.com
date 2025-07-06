@@ -7,6 +7,11 @@ import styles from "./Background.module.css";
 
 gsap.registerPlugin(InertiaPlugin);
 
+function getCSSVariable(name: string) {
+  if (typeof window === "undefined") return "";
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
 const throttle = (func: (...args: unknown[]) => void, limit: number) => {
   let lastCall = 0;
   return function (this: unknown, ...args: unknown[]) {
@@ -38,7 +43,6 @@ export interface DotGridProps {
   maxSpeed?: number;
   resistance?: number;
   returnDuration?: number;
-  className?: string;
   style?: React.CSSProperties;
 }
 
@@ -46,28 +50,27 @@ function hexToRgb(hex: string) {
   const match = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
   return match
     ? {
-        r: parseInt(match[1], 16),
-        g: parseInt(match[2], 16),
-        b: parseInt(match[3], 16),
-      }
+      r: parseInt(match[1], 16),
+      g: parseInt(match[2], 16),
+      b: parseInt(match[3], 16),
+    }
     : { r: 0, g: 0, b: 0 };
 }
 
-export const DotGrid: React.FC<DotGridProps> = ({
-  dotSize = 3,
-  gap = 32,
-  baseColor = "#0f0f0f",
-  activeColor = "#5227FF",
-  proximity = 150,
-  speedTrigger = 100,
-  shockRadius = 220,
-  shockStrength = 7,
-  maxSpeed = 5000,
-  resistance = 300,
-  returnDuration = 1,
-  className = "",
-  style,
-}) => {
+export const DotGrid = ({
+    dotSize = 3,
+    gap = 32,
+    baseColor = getCSSVariable("--background-dots"),
+    activeColor = getCSSVariable("--background-dots-active"),
+    proximity = 150,
+    speedTrigger = 100,
+    shockRadius = 220,
+    shockStrength = 7,
+    maxSpeed = 5000,
+    resistance = 300,
+    returnDuration = 1,
+    style = undefined
+  }: DotGridProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dotsRef = useRef<Dot[]>([]);
@@ -121,13 +124,13 @@ export const DotGrid: React.FC<DotGridProps> = ({
 
     const dots: Dot[] = [];
     for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) { 
+      for (let x = 0; x < cols; x++) {
         dots.push({
-          cx: startX + x * cellSize, 
-          cy: startY + y * cellSize, 
-          xOffset: 0, 
-          yOffset: 0, 
-          animating: false 
+          cx: startX + x * cellSize,
+          cy: startY + y * cellSize,
+          xOffset: 0,
+          yOffset: 0,
+          animating: false
         });
       }
     }
@@ -244,10 +247,10 @@ export const DotGrid: React.FC<DotGridProps> = ({
           gsap.killTweensOf(dot);
 
           gsap.to(dot, {
-            inertia: { 
-              xOffset: dot.cx - pr.x + vx * 0.005, 
-              yOffset: dot.cy - pr.y + vy * 0.005, 
-              resistance 
+            inertia: {
+              xOffset: dot.cx - pr.x + vx * 0.005,
+              yOffset: dot.cy - pr.y + vy * 0.005,
+              resistance
             },
             onComplete: () => {
               gsap.to(dot, {
@@ -276,10 +279,10 @@ export const DotGrid: React.FC<DotGridProps> = ({
           gsap.killTweensOf(dot);
 
           gsap.to(dot, {
-            inertia: { 
-              xOffset: (dot.cx - cx) * shockStrength * (Math.max(0, 1 - dist / shockRadius)), 
-              yOffset: (dot.cy - cy) * shockStrength * (Math.max(0, 1 - dist / shockRadius)), 
-              resistance 
+            inertia: {
+              xOffset: (dot.cx - cx) * shockStrength * (Math.max(0, 1 - dist / shockRadius)),
+              yOffset: (dot.cy - cy) * shockStrength * (Math.max(0, 1 - dist / shockRadius)),
+              resistance
             },
             onComplete: () => {
               gsap.to(dot, {
@@ -314,7 +317,7 @@ export const DotGrid: React.FC<DotGridProps> = ({
   ]);
 
   return (
-    <section className={`${styles.dotGrid} ${className}`} style={style}>
+    <section className={`${styles.dotGrid}`} style={style}>
       <div ref={wrapperRef} className={styles.dotGridWrap}>
         <canvas ref={canvasRef} className={styles.dotGridCanvas} />
       </div>

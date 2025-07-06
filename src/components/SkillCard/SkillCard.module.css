@@ -35,7 +35,7 @@
 }
 
 .skillItem:hover .skillIcon {
-  fill: var(--very-light);
+  fill: #c99df3;
   stroke: var(--primary);
   stroke-width: 0.5;
 }

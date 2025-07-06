@@ -1,10 +1,11 @@
 :root {
   --primary: #893eb5;
-  --light: #a855f7;
-  --very-light: #c99df3;
+  --light: #b379e8;
   --dark: #1f1534;
   --grey: #b4b4b4;
   --transparent-grey: #ffffff1a;
+  --background-dots: #181818;
+  --background-dots-active: #8d11c2;
 }
 
 *,
@@ -24,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: var(--light);
+  color: var(--primary);
 }
 
 button:focus {
