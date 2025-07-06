@@ -3,6 +3,98 @@ import aboutMeImage from "../../assets/profile/about-me.webp";
 
 import { motion } from "framer-motion";
 
+import {
+  SiPython,
+  SiCplusplus,
+  SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiElectron,
+  SiPytorch,
+  SiTensorflow,
+  SiDjango,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa"
+import { TechItem } from "../../components/TechItem/TechItem";
+
+const techList = [
+  {
+    id: 1,
+    name: "Python",
+    Icon: SiPython,
+    type: "Language",
+  },
+  {
+    id: 2,
+    name: "Java",
+    Icon: FaJava,
+    type: "Language"
+  },
+  {
+    id: 3,
+    name: "C++",
+    Icon: SiCplusplus,
+    type: "Language",
+  },
+  {
+    id: 4,
+    name: "JavaScript",
+    Icon: SiJavascript,
+    type: "Language",
+  },
+  {
+    id: 5,
+    name: "TypeScript",
+    Icon: SiTypescript,
+    type: "Language",
+  },
+  {
+    id: 6,
+    name: "HTML",
+    Icon: SiHtml5,
+    type: "Language",
+  },
+  {
+    id: 7,
+    name: "CSS",
+    Icon: SiCss3,
+    type: "Language",
+  },
+  {
+    id: 8,
+    name: "ReactJS",
+    Icon: SiReact,
+    type: "Framework",
+  },
+  {
+    id: 9,
+    name: "ElectronJS",
+    Icon: SiElectron,
+    type: "Framework",
+  },
+  {
+    id: 10,
+    name: "PyTorch",
+    Icon: SiPytorch,
+    type: "Library",
+  },
+  {
+    id: 11,
+    name: "TensorFlow",
+    Icon: SiTensorflow,
+    type: "Library",
+  },
+  {
+    id: 12,
+    name: "Django",
+    Icon: SiDjango,
+    type: "Framework",
+  },
+];
+
 export const About = () => {
   return (
     <section className="section" id="about-me">
@@ -35,6 +127,27 @@ export const About = () => {
                 <strong>volleyball player</strong> and{" "}
                 <strong>bilingual</strong> student.
               </p>
+              
+              <div className={styles.contentDivider}></div>
+
+              <h4>Tech Stack:</h4>
+              <div className={styles.techItems}>
+                {techList.map((tech, index) => (
+                  <motion.div
+                    key={tech.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                  >
+                    <TechItem
+                      key={tech.name}
+                      image={tech.Icon}
+                      text={tech.name}
+                    />
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>

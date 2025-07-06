@@ -46,6 +46,25 @@
     font-size: 1.2rem;
 }
 
+h4 {
+    font-size: 14px;
+}
+
+.techItems {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.contentDivider {
+    height: 2px;
+    background-color: grey;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
     .aboutMeContainer {
         flex-direction: column;
@@ -64,5 +83,11 @@
 
     .aboutMeText p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    aboutMeImage {
+        aspect-ratio: 1/2;
     }
 }

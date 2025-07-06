@@ -14,7 +14,6 @@ This site showcases my work, skills, and projects across web design, machine lea
   - Hero
   - About
   - Resume
-  - Skills
   - Projects
   - Contact Info
 

@@ -4,7 +4,6 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import HomeIcon from "@mui/icons-material/Home";
 import AboutIcon from "@mui/icons-material/Person";
 import ResumeIcon from "@mui/icons-material/WorkRounded";
-import SkillsIcon from "@mui/icons-material/Extension";
 import ProjectsIcon from "@mui/icons-material/Code";
 import ContactIcon from "@mui/icons-material/PermPhoneMsg";
 
@@ -14,7 +13,6 @@ const navLinks = [
   { href: "#home", Icon: HomeIcon, label: "Home" },
   { href: "#about-me", Icon: AboutIcon, label: "About" },
   { href: "#resume", Icon: ResumeIcon, label: "Resume" },
-  { href: "#skills", Icon: SkillsIcon, label: "Skills" },
   { href: "#projects", Icon: ProjectsIcon, label: "Projects" },
   { href: "#contact", Icon: ContactIcon, label: "Contact" },
 ];
