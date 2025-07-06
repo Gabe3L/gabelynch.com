@@ -13,6 +13,24 @@ export const Hero = () => {
     transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
+  const links = [
+    {
+      href: "mailto:contact@gabelynch.com",
+      className: "gmail",
+      icon: <EmailIcon className="gmail-icon social-icon" />,
+    },
+    {
+      href: "https://github.com/Gabe3L",
+      className: "github",
+      icon: <GitHubIcon className="github-icon social-icon" />,
+    },
+    {
+      href: "https://www.linkedin.com/in/gabe-lynch/",
+      className: "linkedin",
+      icon: <LinkedInIcon className="linkedin-icon social-icon" />,
+    },
+  ];
+
   return (
     <section className={styles.hero} id="home">
       <div className="container">
@@ -29,36 +47,19 @@ export const Hero = () => {
         </div>
       </div>
       <div className={styles.links}>
-        <motion.a
-          className="gmail"
-          href="mailto:contact@gabelynch.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
-        >
-          <EmailIcon className="gmail-icon social-icon" />
-        </motion.a>
-        <motion.a
-          className="github"
-          href="https://github.com/Gabe3L"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
-        >
-          <GitHubIcon className="github-icon social-icon" />
-        </motion.a>
-        <motion.a
-          className="linkedin"
-          href="https://www.linkedin.com/in/gabe-lynch/"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
-          whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
-        >
-          <LinkedInIcon className="linkedin-icon social-icon" />
-        </motion.a>
+        {links.map(({ href, className, icon }, index) => (
+          <motion.a
+            key={index}
+            className={className}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+            whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
+          >
+            {icon}
+          </motion.a>
+        ))}
       </div>
     </section>
   );
