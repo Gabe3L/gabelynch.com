@@ -1,10 +1,10 @@
-import { Navbar } from "./sections/Navbar/Navbar";
-import { Hero } from "./sections/Hero/Hero";
-import { About } from "./sections/About/About";
-import { Resume } from "./sections/Resume/Resume";
-import { Projects } from "./sections/Projects/Projects";
-import { Contact } from "./sections/Contact/Contact";
-import { Footer } from "./sections/Footer/Footer";
+import { Navbar } from "./layouts/Navbar/Navbar";
+import { Hero } from "./layouts/Hero/Hero";
+import { About } from "./layouts/About/About";
+import { Resume } from "./layouts/Resume/Resume";
+import { Projects } from "./layouts/Projects/Projects";
+import { Contact } from "./layouts/Contact/Contact";
+import { Footer } from "./layouts/Footer/Footer";
 import { DotGrid } from "./components/Background/Background";
 
 import "./styles.css";

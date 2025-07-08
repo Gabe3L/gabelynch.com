@@ -20,3 +20,12 @@ a:hover {
         grid-template-columns: repeat(1, minmax(280px, 1fr));
     }
 }
+
+@media (max-width: 479.98px) {
+    .projectsContent {
+        width: fit-content;
+        max-width: 100%;
+        grid-template-columns: repeat(1, minmax(0, min(100%, 280px)));
+    justify-content: center;
+    }
+}
